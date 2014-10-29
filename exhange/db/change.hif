@@ -1,0 +1,110 @@
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+17
+798
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+74283
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74283.tdf
+1094868434
+6
+# storage
+db|change.(1).cnf
+db|change.(1).cnf
+# user_parameter {
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+A1
+A2
+A3
+A4
+B1
+B2
+B3
+B4
+COUT
+SUM1
+SUM2
+SUM3
+SUM4
+}
+# include_file {
+c:|altera|quartus42|libraries|megafunctions|aglobal.inc
+1101745276
+}
+# end
+# entity
+f74283
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|f74283.bdf
+1094873940
+23
+# storage
+db|change.(2).cnf
+db|change.(2).cnf
+# end
+# entity
+change
+# case_insensitive
+# source_file
+change.bdf
+1196140524
+23
+# storage
+db|change.(0).cnf
+db|change.(0).cnf
+# end
+# complete
+

@@ -1,0 +1,706 @@
+--inst is inst
+--operation mode is normal
+
+inst_lut_out = VCC;
+inst = DFFEA(inst_lut_out, CP1, !PS1, , , , );
+
+
+--inst8 is inst8
+--operation mode is normal
+
+inst8_lut_out = VCC;
+inst8 = DFFEA(inst8_lut_out, CP1, !PS2, , C2_129, , );
+
+
+--H1L1 is viewnew1:inst13|view2:inst9|a~31
+--operation mode is normal
+
+H1L1 = F1L2 & F3L2 & F2L2 $ F4L2;
+
+
+--H1L2 is viewnew1:inst13|view2:inst9|b~6
+--operation mode is normal
+
+H1L2 = !F2L2 & F1L2 & F3L2 $ F4L2 # !F1L2 & F4L2 # !F3L2;
+
+
+--H1L3 is viewnew1:inst13|view2:inst9|c~2
+--operation mode is normal
+
+H1L3 = F1L2 & F2L2 & !F3L2 & F4L2 # !F1L2 & !F2L2 & F4L2 # !F3L2;
+
+
+--H1L4 is viewnew1:inst13|view2:inst9|d~2
+--operation mode is normal
+
+H1L4 = F4L2 & F1L2 & !F2L2 & F3L2 # !F1L2 & F2L2 & !F3L2 # !F4L2 & F2L2 $ !F3L2;
+
+
+--H1L5 is viewnew1:inst13|view2:inst9|e~2
+--operation mode is normal
+
+H1L5 = F3L2 & F2L2 & !F4L2 # !F2L2 & F1L2 # !F3L2 & F1L2 & !F4L2;
+
+
+--H1L6 is viewnew1:inst13|view2:inst9|f~2
+--operation mode is normal
+
+H1L6 = F1L2 & F2L2 & !F4L2 # !F3L2 # !F2L2 & !F3L2 & !F4L2;
+
+
+--H1L7 is viewnew1:inst13|view2:inst9|g~2
+--operation mode is normal
+
+H1L7 = F3L2 & F1L2 $ F2L2 # !F3L2 & F2L2 # F4L2 # !F1L2;
+
+
+--G1_inst1 is viewnew1:inst13|num:inst5|inst1
+--operation mode is normal
+
+G1_inst1_lut_out = !G1_inst1;
+G1_inst1 = DFFEA(G1_inst1_lut_out, E51_7, , , G1_inst, , );
+
+
+--G1_inst is viewnew1:inst13|num:inst5|inst
+--operation mode is normal
+
+G1_inst_lut_out = !G1_inst;
+G1_inst = DFFEA(G1_inst_lut_out, E51_7, , , , , );
+
+
+--F5_3 is viewnew1:inst13|74153M:inst6|3
+--operation mode is normal
+
+F5_3 = G1_inst1 & !G1_inst;
+
+
+--E4_7 is choose:inst4|7490:inst3|7
+--operation mode is normal
+
+E4_7_lut_out = !E4_7;
+E4_7 = DFFEA(E4_7_lut_out, !E4_19, , , , , );
+
+
+--inst12 is inst12
+--operation mode is normal
+
+inst12 = inst8 & E4_7;
+
+
+--C2_49 is 74169:inst6|49
+--operation mode is normal
+
+C2_49_lut_out = !C2_49;
+C2_49 = DFFEA(C2_49_lut_out, inst3, , , C2L7, , );
+
+
+--C2_29 is 74169:inst6|29
+--operation mode is normal
+
+C2_29_lut_out = !C2_29;
+C2_29 = DFFEA(C2_29_lut_out, inst3, , , C2L8, , );
+
+
+--C2_15 is 74169:inst6|15
+--operation mode is normal
+
+C2_15_lut_out = !C2_15;
+C2_15 = DFFEA(C2_15_lut_out, inst3, , , C2L3, , );
+
+
+--C2_3 is 74169:inst6|3
+--operation mode is normal
+
+C2_3_lut_out = !C2_3;
+C2_3 = DFFEA(C2_3_lut_out, inst3, , , C1_129, , );
+
+
+--C1_49 is 74169:inst5|49
+--operation mode is normal
+
+C1_49_lut_out = !C1_49;
+C1_49 = DFFEA(C1_49_lut_out, inst3, , , C1L6, , );
+
+
+--C1_29 is 74169:inst5|29
+--operation mode is normal
+
+C1_29_lut_out = !C1_29;
+C1_29 = DFFEA(C1_29_lut_out, inst3, , , C1L7, , );
+
+
+--C1_3 is 74169:inst5|3
+--operation mode is normal
+
+C1_3_lut_out = !C1_3;
+C1_3 = DFFEA(C1_3_lut_out, inst3, , , , , );
+
+
+--C1_15 is 74169:inst5|15
+--operation mode is normal
+
+C1_15_lut_out = !C1_15;
+C1_15 = DFFEA(C1_15_lut_out, inst3, , , C1_3, , );
+
+
+--C1_129 is 74169:inst5|129
+--operation mode is normal
+
+C1_129 = C1_49 & C1_29 & C1_3 & C1_15;
+
+
+--C2L7 is 74169:inst6|129~11
+--operation mode is normal
+
+C2L7 = C2_29 & C2_15 & C2_3 & C1_129;
+
+
+--C2_129 is 74169:inst6|129
+--operation mode is normal
+
+C2_129 = C2_49 & C2L7;
+
+
+--E51_7 is viewnew1:inst13|choose:inst13|7490:inst3|7
+--operation mode is normal
+
+E51_7_lut_out = !E51_7;
+E51_7 = DFFEA(E51_7_lut_out, !E51_19, , , , , );
+
+
+--E4_19 is choose:inst4|7490:inst3|19
+--operation mode is normal
+
+E4_19_lut_out = E4_11 & E4_14;
+E4_19 = DFFEA(E4_19_lut_out, !E3_7, , , , , );
+
+
+--E5_7 is choose:inst4|7490:inst4|7
+--operation mode is normal
+
+E5_7_lut_out = !E5_7;
+E5_7 = DFFEA(E5_7_lut_out, !E5_19, , , , , );
+
+
+--inst3 is inst3
+--operation mode is normal
+
+inst3 = inst # !E5_7;
+
+
+--C2L8 is 74169:inst6|129~12
+--operation mode is normal
+
+C2L8 = C2_15 & C2_3 & C1_129;
+
+
+--C2L3 is 74169:inst6|15~11
+--operation mode is normal
+
+C2L3 = C2_3 & C1_129;
+
+
+--C1L6 is 74169:inst5|129~9
+--operation mode is normal
+
+C1L6 = C1_29 & C1_3 & C1_15;
+
+
+--C1L7 is 74169:inst5|129~10
+--operation mode is normal
+
+C1L7 = C1_3 & C1_15;
+
+
+--E9_19 is viewnew1:inst13|7490:inst11|19
+--operation mode is normal
+
+E9_19_lut_out = E9_14 & E9_11;
+E9_19 = DFFEA(E9_19_lut_out, !E9_7, , , , , );
+
+
+--E11_19 is viewnew1:inst13|7490:inst14|19
+--operation mode is normal
+
+E11_19_lut_out = E11_14 & E11_11;
+E11_19 = DFFEA(E11_19_lut_out, !E11_7, , , , , );
+
+
+--F1L1 is viewnew1:inst13|74153M:inst|9~135
+--operation mode is normal
+
+F1L1 = G1_inst1 & !E11_19 # !G1_inst1 & !E9_19 # !G1_inst;
+
+
+--E8_19 is viewnew1:inst13|7490:inst10|19
+--operation mode is normal
+
+E8_19_lut_out = E8_14 & E8_11;
+E8_19 = DFFEA(E8_19_lut_out, !E8_7, , , , , );
+
+
+--E01_19 is viewnew1:inst13|7490:inst12|19
+--operation mode is normal
+
+E01_19_lut_out = E01_14 & E01_11;
+E01_19 = DFFEA(E01_19_lut_out, !E01_7, , , , , );
+
+
+--F1L2 is viewnew1:inst13|74153M:inst|9~137
+--operation mode is normal
+
+F1L2 = (G1_inst # G1_inst1 & !E01_19 # !G1_inst1 & !E8_19) & CASCADE(F1L1);
+
+
+--E9_14 is viewnew1:inst13|7490:inst11|14
+--operation mode is normal
+
+E9_14_lut_out = !E9_14;
+E9_14 = DFFEA(E9_14_lut_out, !E9_7, , , E9_11, , );
+
+
+--E11_14 is viewnew1:inst13|7490:inst14|14
+--operation mode is normal
+
+E11_14_lut_out = !E11_14;
+E11_14 = DFFEA(E11_14_lut_out, !E11_7, , , E11_11, , );
+
+
+--F2L1 is viewnew1:inst13|74153M:inst2|9~135
+--operation mode is normal
+
+F2L1 = G1_inst1 & !E11_14 # !G1_inst1 & !E9_14 # !G1_inst;
+
+
+--E8_14 is viewnew1:inst13|7490:inst10|14
+--operation mode is normal
+
+E8_14_lut_out = !E8_14;
+E8_14 = DFFEA(E8_14_lut_out, !E8_7, , , E8_11, , );
+
+
+--E01_14 is viewnew1:inst13|7490:inst12|14
+--operation mode is normal
+
+E01_14_lut_out = !E01_14;
+E01_14 = DFFEA(E01_14_lut_out, !E01_7, , , E01_11, , );
+
+
+--F2L2 is viewnew1:inst13|74153M:inst2|9~137
+--operation mode is normal
+
+F2L2 = (G1_inst # G1_inst1 & !E01_14 # !G1_inst1 & !E8_14) & CASCADE(F2L1);
+
+
+--E9_11 is viewnew1:inst13|7490:inst11|11
+--operation mode is normal
+
+E9_11_lut_out = !E9_19 & !E9_11;
+E9_11 = DFFEA(E9_11_lut_out, !E9_7, , , , , );
+
+
+--E11_11 is viewnew1:inst13|7490:inst14|11
+--operation mode is normal
+
+E11_11_lut_out = !E11_19 & !E11_11;
+E11_11 = DFFEA(E11_11_lut_out, !E11_7, , , , , );
+
+
+--F3L1 is viewnew1:inst13|74153M:inst3|9~135
+--operation mode is normal
+
+F3L1 = G1_inst1 & !E11_11 # !G1_inst1 & !E9_11 # !G1_inst;
+
+
+--E8_11 is viewnew1:inst13|7490:inst10|11
+--operation mode is normal
+
+E8_11_lut_out = !E8_19 & !E8_11;
+E8_11 = DFFEA(E8_11_lut_out, !E8_7, , , , , );
+
+
+--E01_11 is viewnew1:inst13|7490:inst12|11
+--operation mode is normal
+
+E01_11_lut_out = !E01_19 & !E01_11;
+E01_11 = DFFEA(E01_11_lut_out, !E01_7, , , , , );
+
+
+--F3L2 is viewnew1:inst13|74153M:inst3|9~137
+--operation mode is normal
+
+F3L2 = (G1_inst # G1_inst1 & !E01_11 # !G1_inst1 & !E8_11) & CASCADE(F3L1);
+
+
+--E9_7 is viewnew1:inst13|7490:inst11|7
+--operation mode is normal
+
+E9_7_lut_out = !E9_7;
+E9_7 = DFFEA(E9_7_lut_out, !E01_19, , , , , );
+
+
+--E11_7 is viewnew1:inst13|7490:inst14|7
+--operation mode is normal
+
+E11_7_lut_out = !E11_7;
+E11_7 = DFFEA(E11_7_lut_out, inst12, , , , , );
+
+
+--F4L1 is viewnew1:inst13|74153M:inst4|9~135
+--operation mode is normal
+
+F4L1 = G1_inst1 & !E11_7 # !G1_inst1 & !E9_7 # !G1_inst;
+
+
+--E8_7 is viewnew1:inst13|7490:inst10|7
+--operation mode is normal
+
+E8_7_lut_out = !E8_7;
+E8_7 = DFFEA(E8_7_lut_out, !E9_19, , , , , );
+
+
+--E01_7 is viewnew1:inst13|7490:inst12|7
+--operation mode is normal
+
+E01_7_lut_out = !E01_7;
+E01_7 = DFFEA(E01_7_lut_out, !E11_19, , , , , );
+
+
+--F4L2 is viewnew1:inst13|74153M:inst4|9~137
+--operation mode is normal
+
+F4L2 = (G1_inst # G1_inst1 & !E01_7 # !G1_inst1 & !E8_7) & CASCADE(F4L1);
+
+
+--E51_19 is viewnew1:inst13|choose:inst13|7490:inst3|19
+--operation mode is normal
+
+E51_19_lut_out = E51_11 & E51_14;
+E51_19 = DFFEA(E51_19_lut_out, !E41_7, , , , , );
+
+
+--E4_11 is choose:inst4|7490:inst3|11
+--operation mode is normal
+
+E4_11_lut_out = !E4_19 & !E4_11;
+E4_11 = DFFEA(E4_11_lut_out, !E3_7, , , , , );
+
+
+--E4_14 is choose:inst4|7490:inst3|14
+--operation mode is normal
+
+E4_14_lut_out = !E4_14;
+E4_14 = DFFEA(E4_14_lut_out, !E3_7, , , E4_11, , );
+
+
+--E3_7 is choose:inst4|7490:inst2|7
+--operation mode is normal
+
+E3_7_lut_out = !E3_7;
+E3_7 = DFFEA(E3_7_lut_out, !E3_19, , , , , );
+
+
+--E5_19 is choose:inst4|7490:inst4|19
+--operation mode is normal
+
+E5_19_lut_out = E5_11 & E5_14;
+E5_19 = DFFEA(E5_19_lut_out, !E4_7, , , , , );
+
+
+--E51_11 is viewnew1:inst13|choose:inst13|7490:inst3|11
+--operation mode is normal
+
+E51_11_lut_out = !E51_19 & !E51_11;
+E51_11 = DFFEA(E51_11_lut_out, !E41_7, , , , , );
+
+
+--E51_14 is viewnew1:inst13|choose:inst13|7490:inst3|14
+--operation mode is normal
+
+E51_14_lut_out = !E51_14;
+E51_14 = DFFEA(E51_14_lut_out, !E41_7, , , E51_11, , );
+
+
+--E41_7 is viewnew1:inst13|choose:inst13|7490:inst2|7
+--operation mode is normal
+
+E41_7_lut_out = !E41_7;
+E41_7 = DFFEA(E41_7_lut_out, !E41_19, , , , , );
+
+
+--E3_19 is choose:inst4|7490:inst2|19
+--operation mode is normal
+
+E3_19_lut_out = E3_11 & E3_14;
+E3_19 = DFFEA(E3_19_lut_out, !E2_7, , , , , );
+
+
+--E5_11 is choose:inst4|7490:inst4|11
+--operation mode is normal
+
+E5_11_lut_out = !E5_19 & !E5_11;
+E5_11 = DFFEA(E5_11_lut_out, !E4_7, , , , , );
+
+
+--E5_14 is choose:inst4|7490:inst4|14
+--operation mode is normal
+
+E5_14_lut_out = !E5_14;
+E5_14 = DFFEA(E5_14_lut_out, !E4_7, , , E5_11, , );
+
+
+--E41_19 is viewnew1:inst13|choose:inst13|7490:inst2|19
+--operation mode is normal
+
+E41_19_lut_out = E41_11 & E41_14;
+E41_19 = DFFEA(E41_19_lut_out, !E31_7, , , , , );
+
+
+--E3_11 is choose:inst4|7490:inst2|11
+--operation mode is normal
+
+E3_11_lut_out = !E3_19 & !E3_11;
+E3_11 = DFFEA(E3_11_lut_out, !E2_7, , , , , );
+
+
+--E3_14 is choose:inst4|7490:inst2|14
+--operation mode is normal
+
+E3_14_lut_out = !E3_14;
+E3_14 = DFFEA(E3_14_lut_out, !E2_7, , , E3_11, , );
+
+
+--E2_7 is choose:inst4|7490:inst1|7
+--operation mode is normal
+
+E2_7_lut_out = !E2_7;
+E2_7 = DFFEA(E2_7_lut_out, !E2_19, , , , , );
+
+
+--E41_11 is viewnew1:inst13|choose:inst13|7490:inst2|11
+--operation mode is normal
+
+E41_11_lut_out = !E41_19 & !E41_11;
+E41_11 = DFFEA(E41_11_lut_out, !E31_7, , , , , );
+
+
+--E41_14 is viewnew1:inst13|choose:inst13|7490:inst2|14
+--operation mode is normal
+
+E41_14_lut_out = !E41_14;
+E41_14 = DFFEA(E41_14_lut_out, !E31_7, , , E41_11, , );
+
+
+--E31_7 is viewnew1:inst13|choose:inst13|7490:inst1|7
+--operation mode is normal
+
+E31_7_lut_out = !E31_7;
+E31_7 = DFFEA(E31_7_lut_out, !E31_19, , , , , );
+
+
+--E2_19 is choose:inst4|7490:inst1|19
+--operation mode is normal
+
+E2_19_lut_out = E2_11 & E2_14;
+E2_19 = DFFEA(E2_19_lut_out, !E1_7, , , , , );
+
+
+--E31_19 is viewnew1:inst13|choose:inst13|7490:inst1|19
+--operation mode is normal
+
+E31_19_lut_out = E31_11 & E31_14;
+E31_19 = DFFEA(E31_19_lut_out, !E21_7, , , , , );
+
+
+--E2_11 is choose:inst4|7490:inst1|11
+--operation mode is normal
+
+E2_11_lut_out = !E2_19 & !E2_11;
+E2_11 = DFFEA(E2_11_lut_out, !E1_7, , , , , );
+
+
+--E2_14 is choose:inst4|7490:inst1|14
+--operation mode is normal
+
+E2_14_lut_out = !E2_14;
+E2_14 = DFFEA(E2_14_lut_out, !E1_7, , , E2_11, , );
+
+
+--E1_7 is choose:inst4|7490:inst|7
+--operation mode is normal
+
+E1_7_lut_out = !E1_7;
+E1_7 = DFFEA(E1_7_lut_out, !E1_19, , , , , );
+
+
+--E31_11 is viewnew1:inst13|choose:inst13|7490:inst1|11
+--operation mode is normal
+
+E31_11_lut_out = !E31_19 & !E31_11;
+E31_11 = DFFEA(E31_11_lut_out, !E21_7, , , , , );
+
+
+--E31_14 is viewnew1:inst13|choose:inst13|7490:inst1|14
+--operation mode is normal
+
+E31_14_lut_out = !E31_14;
+E31_14 = DFFEA(E31_14_lut_out, !E21_7, , , E31_11, , );
+
+
+--E21_7 is viewnew1:inst13|choose:inst13|7490:inst|7
+--operation mode is normal
+
+E21_7_lut_out = !E21_7;
+E21_7 = DFFEA(E21_7_lut_out, !E21_19, , , , , );
+
+
+--E1_19 is choose:inst4|7490:inst|19
+--operation mode is normal
+
+E1_19_lut_out = E1_11 & E1_14;
+E1_19 = DFFEA(E1_19_lut_out, !CP1, , , , , );
+
+
+--E21_19 is viewnew1:inst13|choose:inst13|7490:inst|19
+--operation mode is normal
+
+E21_19_lut_out = E21_11 & E21_14;
+E21_19 = DFFEA(E21_19_lut_out, !CP1, , , , , );
+
+
+--E1_11 is choose:inst4|7490:inst|11
+--operation mode is normal
+
+E1_11_lut_out = !E1_19 & !E1_11;
+E1_11 = DFFEA(E1_11_lut_out, !CP1, , , , , );
+
+
+--E1_14 is choose:inst4|7490:inst|14
+--operation mode is normal
+
+E1_14_lut_out = !E1_14;
+E1_14 = DFFEA(E1_14_lut_out, !CP1, , , E1_11, , );
+
+
+--E21_11 is viewnew1:inst13|choose:inst13|7490:inst|11
+--operation mode is normal
+
+E21_11_lut_out = !E21_19 & !E21_11;
+E21_11 = DFFEA(E21_11_lut_out, !CP1, , , , , );
+
+
+--E21_14 is viewnew1:inst13|choose:inst13|7490:inst|14
+--operation mode is normal
+
+E21_14_lut_out = !E21_14;
+E21_14 = DFFEA(E21_14_lut_out, !CP1, , , E21_11, , );
+
+
+--CP1 is CP1
+--operation mode is input
+
+CP1 = INPUT();
+
+
+--PS1 is PS1
+--operation mode is input
+
+PS1 = INPUT();
+
+
+--PS2 is PS2
+--operation mode is input
+
+PS2 = INPUT();
+
+
+--LED1 is LED1
+--operation mode is output
+
+LED1 = OUTPUT(!inst);
+
+
+--LED2 is LED2
+--operation mode is output
+
+LED2 = OUTPUT(inst8);
+
+
+--OA is OA
+--operation mode is output
+
+OA = OUTPUT(!H1L1);
+
+
+--OB is OB
+--operation mode is output
+
+OB = OUTPUT(!H1L2);
+
+
+--OC is OC
+--operation mode is output
+
+OC = OUTPUT(!H1L3);
+
+
+--OD is OD
+--operation mode is output
+
+OD = OUTPUT(!H1L4);
+
+
+--OE is OE
+--operation mode is output
+
+OE = OUTPUT(!H1L5);
+
+
+--OF is OF
+--operation mode is output
+
+OF = OUTPUT(!H1L6);
+
+
+--OG is OG
+--operation mode is output
+
+OG = OUTPUT(H1L7);
+
+
+--DP is DP
+--operation mode is output
+
+DP = OUTPUT(F5_3);
+
+
+--DE1 is DE1
+--operation mode is output
+
+DE1 = OUTPUT(G1_inst);
+
+
+--DE2 is DE2
+--operation mode is output
+
+DE2 = OUTPUT(G1_inst1);
+
+
+--DE3 is DE3
+--operation mode is output
+
+DE3 = OUTPUT(GND);
+
+
+--pin_name is pin_name
+--operation mode is output
+
+pin_name = OUTPUT(!inst12);
+
+
+--COM is COM
+--operation mode is output
+
+COM = OUTPUT(VCC);
+
+

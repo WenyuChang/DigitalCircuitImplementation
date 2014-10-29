@@ -1,0 +1,11 @@
+Flow Status : Successful - Tue Nov 27 11:29:43 2007
+Quartus II Version : 4.2 Build 157 12/07/2004 SJ Full Version
+Revision Name : ha_add
+Top-level Entity Name : add2
+Family : FLEX10K
+Device : EPF10K10TC144-4
+Timing Models : Final
+Met timing requirements : N/A
+Total logic elements : 7 / 576 ( 1 % )
+Total pins : 15 / 102 ( 14 % )
+Total memory bits : 0 / 6,144 ( 0 % )

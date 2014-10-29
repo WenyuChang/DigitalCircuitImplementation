@@ -1,0 +1,432 @@
+--E1L1 is view1:inst9|a~31
+--operation mode is normal
+
+E1L1 = B1L2 & B3L2 & B2L2 $ B4L2;
+
+
+--E1L2 is view1:inst9|b~6
+--operation mode is normal
+
+E1L2 = !B2L2 & B1L2 & B3L2 $ B4L2 # !B1L2 & B4L2 # !B3L2;
+
+
+--E1L3 is view1:inst9|c~2
+--operation mode is normal
+
+E1L3 = B1L2 & B2L2 & !B3L2 & B4L2 # !B1L2 & !B2L2 & B4L2 # !B3L2;
+
+
+--E1L4 is view1:inst9|d~2
+--operation mode is normal
+
+E1L4 = B4L2 & B1L2 & !B2L2 & B3L2 # !B1L2 & B2L2 & !B3L2 # !B4L2 & B2L2 $ !B3L2;
+
+
+--E1L5 is view1:inst9|e~2
+--operation mode is normal
+
+E1L5 = B3L2 & B2L2 & !B4L2 # !B2L2 & B1L2 # !B3L2 & B1L2 & !B4L2;
+
+
+--E1L6 is view1:inst9|f~2
+--operation mode is normal
+
+E1L6 = B1L2 & B2L2 & !B4L2 # !B3L2 # !B2L2 & !B3L2 & !B4L2;
+
+
+--E1L7 is view1:inst9|g~2
+--operation mode is normal
+
+E1L7 = B3L2 & B1L2 $ B2L2 # !B3L2 & B2L2 # B4L2 # !B1L2;
+
+
+--C1_inst is num:inst5|inst
+--operation mode is normal
+
+C1_inst_lut_out = !C1_inst;
+C1_inst = DFFEA(C1_inst_lut_out, J4_7, , , , , );
+
+
+--C1_inst1 is num:inst5|inst1
+--operation mode is normal
+
+C1_inst1_lut_out = !C1_inst1;
+C1_inst1 = DFFEA(C1_inst1_lut_out, J4_7, , , C1_inst, , );
+
+
+--J4_7 is choose:inst13|7490:inst3|7
+--operation mode is normal
+
+J4_7_lut_out = !J4_7;
+J4_7 = DFFEA(J4_7_lut_out, !J4_19, , , , , );
+
+
+--H1_q[11] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[11]
+H1_q[11]_write_address = WR_ADDR(K0, K1);
+H1_q[11]_read_address = RD_ADDR(K0, K1);
+H1_q[11] = MEMORY_SEGMENT(, , , , , , , , H1_q[11]_write_address, H1_q[11]_read_address);
+
+
+--H1_q[3] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[3]
+H1_q[3]_write_address = WR_ADDR(K0, K1);
+H1_q[3]_read_address = RD_ADDR(K0, K1);
+H1_q[3] = MEMORY_SEGMENT(, , , , , , , , H1_q[3]_write_address, H1_q[3]_read_address);
+
+
+--B1L1 is 74153M:inst|9~135
+--operation mode is normal
+
+B1L1 = C1_inst1 & !H1_q[3] # !C1_inst1 & !H1_q[11] # !C1_inst;
+
+
+--H1_q[15] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+H1_q[15]_write_address = WR_ADDR(K0, K1);
+H1_q[15]_read_address = RD_ADDR(K0, K1);
+H1_q[15] = MEMORY_SEGMENT(, , , , , , , , H1_q[15]_write_address, H1_q[15]_read_address);
+
+
+--H1_q[7] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[7]
+H1_q[7]_write_address = WR_ADDR(K0, K1);
+H1_q[7]_read_address = RD_ADDR(K0, K1);
+H1_q[7] = MEMORY_SEGMENT(, , , , , , , , H1_q[7]_write_address, H1_q[7]_read_address);
+
+
+--B1L2 is 74153M:inst|9~137
+--operation mode is normal
+
+B1L2 = (C1_inst # C1_inst1 & !H1_q[7] # !C1_inst1 & !H1_q[15]) & CASCADE(B1L1);
+
+
+--H1_q[10] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[10]
+H1_q[10]_write_address = WR_ADDR(K0, K1);
+H1_q[10]_read_address = RD_ADDR(K0, K1);
+H1_q[10] = MEMORY_SEGMENT(, , , , , , , , H1_q[10]_write_address, H1_q[10]_read_address);
+
+
+--H1_q[2] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[2]
+H1_q[2]_write_address = WR_ADDR(K0, K1);
+H1_q[2]_read_address = RD_ADDR(K0, K1);
+H1_q[2] = MEMORY_SEGMENT(, , , , , , , , H1_q[2]_write_address, H1_q[2]_read_address);
+
+
+--B2L1 is 74153M:inst2|9~135
+--operation mode is normal
+
+B2L1 = C1_inst1 & !H1_q[2] # !C1_inst1 & !H1_q[10] # !C1_inst;
+
+
+--H1_q[14] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+H1_q[14]_write_address = WR_ADDR(K0, K1);
+H1_q[14]_read_address = RD_ADDR(K0, K1);
+H1_q[14] = MEMORY_SEGMENT(, , , , , , , , H1_q[14]_write_address, H1_q[14]_read_address);
+
+
+--H1_q[6] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[6]
+H1_q[6]_write_address = WR_ADDR(K0, K1);
+H1_q[6]_read_address = RD_ADDR(K0, K1);
+H1_q[6] = MEMORY_SEGMENT(, , , , , , , , H1_q[6]_write_address, H1_q[6]_read_address);
+
+
+--B2L2 is 74153M:inst2|9~137
+--operation mode is normal
+
+B2L2 = (C1_inst # C1_inst1 & !H1_q[6] # !C1_inst1 & !H1_q[14]) & CASCADE(B2L1);
+
+
+--H1_q[9] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[9]
+H1_q[9]_write_address = WR_ADDR(K0, K1);
+H1_q[9]_read_address = RD_ADDR(K0, K1);
+H1_q[9] = MEMORY_SEGMENT(, , , , , , , , H1_q[9]_write_address, H1_q[9]_read_address);
+
+
+--H1_q[1] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[1]
+H1_q[1]_write_address = WR_ADDR(K0, K1);
+H1_q[1]_read_address = RD_ADDR(K0, K1);
+H1_q[1] = MEMORY_SEGMENT(, , , , , , , , H1_q[1]_write_address, H1_q[1]_read_address);
+
+
+--B3L1 is 74153M:inst3|9~135
+--operation mode is normal
+
+B3L1 = C1_inst1 & !H1_q[1] # !C1_inst1 & !H1_q[9] # !C1_inst;
+
+
+--H1_q[13] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[13]
+H1_q[13]_write_address = WR_ADDR(K0, K1);
+H1_q[13]_read_address = RD_ADDR(K0, K1);
+H1_q[13] = MEMORY_SEGMENT(, , , , , , , , H1_q[13]_write_address, H1_q[13]_read_address);
+
+
+--H1_q[5] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[5]
+H1_q[5]_write_address = WR_ADDR(K0, K1);
+H1_q[5]_read_address = RD_ADDR(K0, K1);
+H1_q[5] = MEMORY_SEGMENT(, , , , , , , , H1_q[5]_write_address, H1_q[5]_read_address);
+
+
+--B3L2 is 74153M:inst3|9~137
+--operation mode is normal
+
+B3L2 = (C1_inst # C1_inst1 & !H1_q[5] # !C1_inst1 & !H1_q[13]) & CASCADE(B3L1);
+
+
+--H1_q[8] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[8]
+H1_q[8]_write_address = WR_ADDR(K0, K1);
+H1_q[8]_read_address = RD_ADDR(K0, K1);
+H1_q[8] = MEMORY_SEGMENT(, , , , , , , , H1_q[8]_write_address, H1_q[8]_read_address);
+
+
+--H1_q[0] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[0]
+H1_q[0]_write_address = WR_ADDR(K0, K1);
+H1_q[0]_read_address = RD_ADDR(K0, K1);
+H1_q[0] = MEMORY_SEGMENT(, , , , , , , , H1_q[0]_write_address, H1_q[0]_read_address);
+
+
+--B4L1 is 74153M:inst4|9~135
+--operation mode is normal
+
+B4L1 = C1_inst1 & !H1_q[0] # !C1_inst1 & !H1_q[8] # !C1_inst;
+
+
+--H1_q[12] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[12]
+H1_q[12]_write_address = WR_ADDR(K0, K1);
+H1_q[12]_read_address = RD_ADDR(K0, K1);
+H1_q[12] = MEMORY_SEGMENT(, , , , , , , , H1_q[12]_write_address, H1_q[12]_read_address);
+
+
+--H1_q[4] is ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom|q[4]
+H1_q[4]_write_address = WR_ADDR(K0, K1);
+H1_q[4]_read_address = RD_ADDR(K0, K1);
+H1_q[4] = MEMORY_SEGMENT(, , , , , , , , H1_q[4]_write_address, H1_q[4]_read_address);
+
+
+--B4L2 is 74153M:inst4|9~137
+--operation mode is normal
+
+B4L2 = (C1_inst # C1_inst1 & !H1_q[4] # !C1_inst1 & !H1_q[12]) & CASCADE(B4L1);
+
+
+--B5L1 is 74153M:inst6|9~135
+--operation mode is normal
+
+B5L1 = C1_inst1 & !dp3 # !C1_inst1 & !dp1 # !C1_inst;
+
+
+--B5L2 is 74153M:inst6|9~137
+--operation mode is normal
+
+B5L2 = (C1_inst # C1_inst1 & !dp2 # !C1_inst1 & !dp0) & CASCADE(B5L1);
+
+
+--J4_19 is choose:inst13|7490:inst3|19
+--operation mode is normal
+
+J4_19_lut_out = J4_11 & J4_14;
+J4_19 = DFFEA(J4_19_lut_out, !J3_7, , , , , );
+
+
+--J4_11 is choose:inst13|7490:inst3|11
+--operation mode is normal
+
+J4_11_lut_out = !J4_19 & !J4_11;
+J4_11 = DFFEA(J4_11_lut_out, !J3_7, , , , , );
+
+
+--J4_14 is choose:inst13|7490:inst3|14
+--operation mode is normal
+
+J4_14_lut_out = !J4_14;
+J4_14 = DFFEA(J4_14_lut_out, !J3_7, , , J4_11, , );
+
+
+--J3_7 is choose:inst13|7490:inst2|7
+--operation mode is normal
+
+J3_7_lut_out = !J3_7;
+J3_7 = DFFEA(J3_7_lut_out, !J3_19, , , , , );
+
+
+--J3_19 is choose:inst13|7490:inst2|19
+--operation mode is normal
+
+J3_19_lut_out = J3_11 & J3_14;
+J3_19 = DFFEA(J3_19_lut_out, !J2_7, , , , , );
+
+
+--J3_11 is choose:inst13|7490:inst2|11
+--operation mode is normal
+
+J3_11_lut_out = !J3_19 & !J3_11;
+J3_11 = DFFEA(J3_11_lut_out, !J2_7, , , , , );
+
+
+--J3_14 is choose:inst13|7490:inst2|14
+--operation mode is normal
+
+J3_14_lut_out = !J3_14;
+J3_14 = DFFEA(J3_14_lut_out, !J2_7, , , J3_11, , );
+
+
+--J2_7 is choose:inst13|7490:inst1|7
+--operation mode is normal
+
+J2_7_lut_out = !J2_7;
+J2_7 = DFFEA(J2_7_lut_out, !J2_19, , , , , );
+
+
+--J2_19 is choose:inst13|7490:inst1|19
+--operation mode is normal
+
+J2_19_lut_out = J2_11 & J2_14;
+J2_19 = DFFEA(J2_19_lut_out, !J1_7, , , , , );
+
+
+--J2_11 is choose:inst13|7490:inst1|11
+--operation mode is normal
+
+J2_11_lut_out = !J2_19 & !J2_11;
+J2_11 = DFFEA(J2_11_lut_out, !J1_7, , , , , );
+
+
+--J2_14 is choose:inst13|7490:inst1|14
+--operation mode is normal
+
+J2_14_lut_out = !J2_14;
+J2_14 = DFFEA(J2_14_lut_out, !J1_7, , , J2_11, , );
+
+
+--J1_7 is choose:inst13|7490:inst|7
+--operation mode is normal
+
+J1_7_lut_out = !J1_7;
+J1_7 = DFFEA(J1_7_lut_out, !J1_19, , , , , );
+
+
+--J1_19 is choose:inst13|7490:inst|19
+--operation mode is normal
+
+J1_19_lut_out = J1_11 & J1_14;
+J1_19 = DFFEA(J1_19_lut_out, !F10MHz, , , , , );
+
+
+--J1_11 is choose:inst13|7490:inst|11
+--operation mode is normal
+
+J1_11_lut_out = !J1_19 & !J1_11;
+J1_11 = DFFEA(J1_11_lut_out, !F10MHz, , , , , );
+
+
+--J1_14 is choose:inst13|7490:inst|14
+--operation mode is normal
+
+J1_14_lut_out = !J1_14;
+J1_14 = DFFEA(J1_14_lut_out, !F10MHz, , , J1_11, , );
+
+
+--dp1 is dp1
+--operation mode is input
+
+dp1 = INPUT();
+
+
+--dp3 is dp3
+--operation mode is input
+
+dp3 = INPUT();
+
+
+--dp0 is dp0
+--operation mode is input
+
+dp0 = INPUT();
+
+
+--dp2 is dp2
+--operation mode is input
+
+dp2 = INPUT();
+
+
+--K0 is K0
+--operation mode is input
+
+K0 = INPUT();
+
+
+--K1 is K1
+--operation mode is input
+
+K1 = INPUT();
+
+
+--F10MHz is F10MHz
+--operation mode is input
+
+F10MHz = INPUT();
+
+
+--OA is OA
+--operation mode is output
+
+OA = OUTPUT(!E1L1);
+
+
+--OB is OB
+--operation mode is output
+
+OB = OUTPUT(!E1L2);
+
+
+--OC is OC
+--operation mode is output
+
+OC = OUTPUT(!E1L3);
+
+
+--OD is OD
+--operation mode is output
+
+OD = OUTPUT(!E1L4);
+
+
+--OE is OE
+--operation mode is output
+
+OE = OUTPUT(!E1L5);
+
+
+--OF is OF
+--operation mode is output
+
+OF = OUTPUT(!E1L6);
+
+
+--OG is OG
+--operation mode is output
+
+OG = OUTPUT(E1L7);
+
+
+--dp is dp
+--operation mode is output
+
+dp = OUTPUT(!B5L2);
+
+
+--DE1 is DE1
+--operation mode is output
+
+DE1 = OUTPUT(C1_inst);
+
+
+--DE2 is DE2
+--operation mode is output
+
+DE2 = OUTPUT(C1_inst1);
+
+
+--DE3 is DE3
+--operation mode is output
+
+DE3 = OUTPUT(GND);
+
+

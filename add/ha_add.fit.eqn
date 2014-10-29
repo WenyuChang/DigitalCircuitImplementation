@@ -1,0 +1,132 @@
+--C1_69 is 7448:inst11|69 at LC7_C24
+--operation mode is normal
+
+C1_69 = B1 & B0 $ (!A1 & !A0) # !B1 & A1 & A0 & !B0 # !A1 & !A0 & B0;
+
+
+--C1L5 is 7448:inst11|68~8 at LC1_C22
+--operation mode is normal
+
+C1L5 = A0 & A1 & B0 # B1;
+
+
+--C1L1 is 7448:inst11|4~66 at LC2_C22
+--operation mode is normal
+
+C1L1 = B1 & B0 & !A1 & !A0 # !B1 & !B0 & A1 $ A0;
+
+
+--C1L4 is 7448:inst11|67~165 at LC3_C22
+--operation mode is normal
+
+C1L4 = A1 & A0 & !B1 & !B0 # !A0 & B1 & B0 # !A1 & A0 & B1 & B0 # !A0 & B1 $ B0;
+
+
+--C1_71 is 7448:inst11|71 at LC4_C16
+--operation mode is normal
+
+C1_71 = B1 & A1 $ A0 # !B0 # !B1 & B0 # A1 & A0;
+
+
+--C1L3 is 7448:inst11|66~129 at LC5_C22
+--operation mode is normal
+
+C1L3 = A1 & !A0 & !B0 # !B1 # !A1 & B1 & !A0 # !B0 # !B1 & B0 # A0;
+
+
+--C1L2 is 7448:inst11|4~67 at LC6_C22
+--operation mode is normal
+
+C1L2 = !A0 & !A1 & !B1 # !B0;
+
+
+--A1 is A1 at PIN_47
+--operation mode is input
+
+A1 = INPUT();
+
+
+--A0 is A0 at PIN_49
+--operation mode is input
+
+A0 = INPUT();
+
+
+--B1 is B1 at PIN_48
+--operation mode is input
+
+B1 = INPUT();
+
+
+--B0 is B0 at PIN_51
+--operation mode is input
+
+B0 = INPUT();
+
+
+--COM is COM at PIN_65
+--operation mode is output
+
+COM = OUTPUT(VCC);
+
+
+--OA is OA at PIN_23
+--operation mode is output
+
+OA = OUTPUT(!C1_69);
+
+
+--OB is OB at PIN_26
+--operation mode is output
+
+OB = OUTPUT(!C1L5);
+
+
+--OC is OC at PIN_27
+--operation mode is output
+
+OC = OUTPUT(!C1L1);
+
+
+--OD is OD at PIN_28
+--operation mode is output
+
+OD = OUTPUT(!C1L4);
+
+
+--OE is OE at PIN_29
+--operation mode is output
+
+OE = OUTPUT(!C1_71);
+
+
+--OF is OF at PIN_30
+--operation mode is output
+
+OF = OUTPUT(!C1L3);
+
+
+--OG is OG at PIN_31
+--operation mode is output
+
+OG = OUTPUT(!C1L2);
+
+
+--1 is 1 at PIN_33
+--operation mode is output
+
+1 = OUTPUT(VCC);
+
+
+--2 is 2 at PIN_36
+--operation mode is output
+
+2 = OUTPUT(GND);
+
+
+--3 is 3 at PIN_37
+--operation mode is output
+
+3 = OUTPUT(GND);
+
+

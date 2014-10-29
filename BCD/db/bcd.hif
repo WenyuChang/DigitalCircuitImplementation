@@ -1,0 +1,58 @@
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+17
+798
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+74148
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74148.bdf
+1094865808
+23
+# storage
+db|bcd.(1).cnf
+db|bcd.(1).cnf
+# end
+# entity
+bcd
+# case_insensitive
+# source_file
+bcd.bdf
+1196146636
+23
+# storage
+db|bcd.(0).cnf
+db|bcd.(0).cnf
+# end
+# complete
+

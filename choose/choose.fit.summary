@@ -1,0 +1,11 @@
+Flow Status : Successful - Tue Nov 27 18:59:21 2007
+Quartus II Version : 4.2 Build 157 12/07/2004 SJ Full Version
+Revision Name : choose
+Top-level Entity Name : choose1
+Family : FLEX10K
+Device : EPF10K10TC144-4
+Timing Models : Final
+Met timing requirements : N/A
+Total logic elements : 40 / 576 ( 6 % )
+Total pins : 15 / 102 ( 14 % )
+Total memory bits : 0 / 6,144 ( 0 % )

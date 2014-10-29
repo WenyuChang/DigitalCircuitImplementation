@@ -1,0 +1,140 @@
+--C1L4 is 74283:inst|f74283:sub|89~3 at LC4_A21
+--operation mode is arithmetic
+
+C1L4 = X $ A2 $ C1_88;
+
+--C1_89 is 74283:inst|f74283:sub|89 at LC4_A21
+--operation mode is arithmetic
+
+C1_89 = CARRY(X & A2 & C1_88 # !X & A2 # C1_88);
+
+
+--C1L6 is 74283:inst|f74283:sub|90~3 at LC5_A21
+--operation mode is arithmetic
+
+C1L6 = A3 $ X $ C1_89;
+
+--C1_90 is 74283:inst|f74283:sub|90 at LC5_A21
+--operation mode is arithmetic
+
+C1_90 = CARRY(A3 & X # C1_89 # !A3 & X & C1_89);
+
+
+--C1L8 is 74283:inst|f74283:sub|91~0 at LC6_A21
+--operation mode is arithmetic
+
+C1L8 = A4 $ X $ C1_90;
+
+--C1_91 is 74283:inst|f74283:sub|91 at LC6_A21
+--operation mode is arithmetic
+
+C1_91 = CARRY(A4 & X # C1_90 # !A4 & X & C1_90);
+
+
+--C1L2 is 74283:inst|f74283:sub|88~3 at LC3_A21
+--operation mode is arithmetic
+
+C1L2 = A1;
+
+--C1_88 is 74283:inst|f74283:sub|88 at LC3_A21
+--operation mode is arithmetic
+
+C1_88 = CARRY(A1);
+
+
+--C1L01 is 74283:inst|f74283:sub|91~12 at LC7_A21
+--operation mode is normal
+
+C1L01 = C1_91;
+
+
+--A1 is A1 at PIN_51
+--operation mode is input
+
+A1 = INPUT();
+
+
+--X is X at PIN_59
+--operation mode is input
+
+X = INPUT();
+
+
+--A2 is A2 at PIN_49
+--operation mode is input
+
+A2 = INPUT();
+
+
+--A3 is A3 at PIN_48
+--operation mode is input
+
+A3 = INPUT();
+
+
+--A4 is A4 at PIN_47
+--operation mode is input
+
+A4 = INPUT();
+
+
+--S1 is S1 at PIN_11
+--operation mode is output
+
+S1 = OUTPUT(!A1L9);
+
+
+--S2 is S2 at PIN_10
+--operation mode is output
+
+S2 = OUTPUT(!C1L4);
+
+
+--S3 is S3 at PIN_9
+--operation mode is output
+
+S3 = OUTPUT(A1L21);
+
+
+--S4 is S4 at PIN_8
+--operation mode is output
+
+S4 = OUTPUT(A1L41);
+
+
+--C is C at PIN_7
+--operation mode is output
+
+C = OUTPUT(A1L7);
+
+
+--COM is COM at PIN_141
+--operation mode is output
+
+COM = OUTPUT(VCC);
+
+
+--A1L9 is S1~0 at LC5_A14
+--operation mode is normal
+
+A1L9 = A1;
+
+
+--A1L21 is S3~0 at LC3_A15
+--operation mode is normal
+
+A1L21 = C1L6;
+
+
+--A1L41 is S4~0 at LC2_A21
+--operation mode is normal
+
+A1L41 = C1L8;
+
+
+--A1L7 is C~0 at LC1_A21
+--operation mode is normal
+
+A1L7 = C1L01;
+
+

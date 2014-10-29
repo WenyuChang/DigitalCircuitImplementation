@@ -1,0 +1,116 @@
+--C1L4 is 74283:inst|f74283:sub|89~3
+--operation mode is arithmetic
+
+C1L4 = X $ A2 $ C1_88;
+
+--C1_89 is 74283:inst|f74283:sub|89
+--operation mode is arithmetic
+
+C1_89 = CARRY(X & A2 & C1_88 # !X & A2 # C1_88);
+
+
+--C1L6 is 74283:inst|f74283:sub|90~3
+--operation mode is arithmetic
+
+C1L6 = A3 $ X $ C1_89;
+
+--C1_90 is 74283:inst|f74283:sub|90
+--operation mode is arithmetic
+
+C1_90 = CARRY(A3 & X # C1_89 # !A3 & X & C1_89);
+
+
+--C1L8 is 74283:inst|f74283:sub|91~0
+--operation mode is arithmetic
+
+C1L8 = A4 $ X $ C1_90;
+
+--C1_91 is 74283:inst|f74283:sub|91
+--operation mode is arithmetic
+
+C1_91 = CARRY(A4 & X # C1_90 # !A4 & X & C1_90);
+
+
+--C1L2 is 74283:inst|f74283:sub|88~3
+--operation mode is arithmetic
+
+C1L2 = A1;
+
+--C1_88 is 74283:inst|f74283:sub|88
+--operation mode is arithmetic
+
+C1_88 = CARRY(A1);
+
+
+--C1L01 is 74283:inst|f74283:sub|91~12
+--operation mode is normal
+
+C1L01 = C1_91;
+
+
+--A1 is A1
+--operation mode is input
+
+A1 = INPUT();
+
+
+--X is X
+--operation mode is input
+
+X = INPUT();
+
+
+--A2 is A2
+--operation mode is input
+
+A2 = INPUT();
+
+
+--A3 is A3
+--operation mode is input
+
+A3 = INPUT();
+
+
+--A4 is A4
+--operation mode is input
+
+A4 = INPUT();
+
+
+--S1 is S1
+--operation mode is output
+
+S1 = OUTPUT(!A1);
+
+
+--S2 is S2
+--operation mode is output
+
+S2 = OUTPUT(!C1L4);
+
+
+--S3 is S3
+--operation mode is output
+
+S3 = OUTPUT(C1L6);
+
+
+--S4 is S4
+--operation mode is output
+
+S4 = OUTPUT(C1L8);
+
+
+--C is C
+--operation mode is output
+
+C = OUTPUT(C1L01);
+
+
+--COM is COM
+--operation mode is output
+
+COM = OUTPUT(VCC);
+
+

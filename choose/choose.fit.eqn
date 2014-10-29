@@ -1,0 +1,358 @@
+--D1L1 is 74138:inst2|15~11 at LC7_C16
+--operation mode is normal
+
+D1L1 = !F1L4 & !C & !B & !A;
+
+
+--D1L2 is 74138:inst2|16~10 at LC6_C17
+--operation mode is normal
+
+D1L2 = A & !F1L4 & !C & !B;
+
+
+--D1L3 is 74138:inst2|17~10 at LC5_C17
+--operation mode is normal
+
+D1L3 = B & !F1L4 & !C & !A;
+
+
+--D1L4 is 74138:inst2|18~10 at LC4_C20
+--operation mode is normal
+
+D1L4 = B & A & !F1L4 & !C;
+
+
+--D1L5 is 74138:inst2|19~10 at LC3_C17
+--operation mode is normal
+
+D1L5 = C & !B & !A & !F1L3;
+
+
+--D1L6 is 74138:inst2|20~9 at LC2_C17
+--operation mode is normal
+
+D1L6 = A & C & !B & !F1L3;
+
+
+--D1L7 is 74138:inst2|21~9 at LC1_C17
+--operation mode is normal
+
+D1L7 = B & C & !A & !F1L3;
+
+
+--D1L8 is 74138:inst2|22~9 at LC7_C15
+--operation mode is normal
+
+D1L8 = B & A & C & !F1L3;
+
+
+--E1_7 is choose:inst|7490:inst|7 at LC1_B4
+--operation mode is normal
+
+E1_7_lut_out = !E1_7;
+E1_7 = DFFEA(E1_7_lut_out, !E1_19, , , , , );
+
+
+--F1_71 is 74151:inst1|f74151:sub|71 at LC3_C16
+--operation mode is normal
+
+F1_71 = B # A & !E1_7 # !A & !CP;
+
+
+--E3_7 is choose:inst|7490:inst2|7 at LC1_C21
+--operation mode is normal
+
+E3_7_lut_out = !E3_7;
+E3_7 = DFFEA(E3_7_lut_out, !E3_19, , , , , );
+
+
+--E2_7 is choose:inst|7490:inst1|7 at LC1_C16
+--operation mode is normal
+
+E2_7_lut_out = !E2_7;
+E2_7 = DFFEA(E2_7_lut_out, !E2_19, , , , , );
+
+
+--F1L4 is 74151:inst1|f74151:sub|78~3 at LC4_C16
+--operation mode is normal
+
+F1L4 = (A & !E3_7 # !A & !E2_7 # !B) & CASCADE(F1_71);
+
+
+--E7_7 is choose:inst|7490:inst6|7 at LC1_C24
+--operation mode is normal
+
+E7_7_lut_out = !E7_7;
+E7_7 = DFFEA(E7_7_lut_out, !E7_19, , , , , );
+
+
+--E6_7 is choose:inst|7490:inst5|7 at LC1_C23
+--operation mode is normal
+
+E6_7_lut_out = !E6_7;
+E6_7 = DFFEA(E6_7_lut_out, !E6_19, , , , , );
+
+
+--F1_74 is 74151:inst1|f74151:sub|74 at LC2_C24
+--operation mode is normal
+
+F1_74 = A & !E7_7 # !A & !E6_7 # !B;
+
+
+--E5_7 is choose:inst|7490:inst4|7 at LC2_C14
+--operation mode is normal
+
+E5_7_lut_out = !E5_7;
+E5_7 = DFFEA(E5_7_lut_out, !E5_19, , , , , );
+
+
+--E4_7 is choose:inst|7490:inst3|7 at LC1_C22
+--operation mode is normal
+
+E4_7_lut_out = !E4_7;
+E4_7 = DFFEA(E4_7_lut_out, !E4_19, , , , , );
+
+
+--F1L3 is 74151:inst1|f74151:sub|77~3 at LC3_C24
+--operation mode is normal
+
+F1L3 = (B # A & !E5_7 # !A & !E4_7) & CASCADE(F1_74);
+
+
+--E1_19 is choose:inst|7490:inst|19 at LC2_B4
+--operation mode is normal
+
+E1_19_lut_out = E1_11 & E1_14;
+E1_19 = DFFEA(E1_19_lut_out, !GLOBAL(CP), , , , , );
+
+
+--E3_19 is choose:inst|7490:inst2|19 at LC6_C16
+--operation mode is normal
+
+E3_19_lut_out = E3_11 & E3_14;
+E3_19 = DFFEA(E3_19_lut_out, !E2_7, , , , , );
+
+
+--E2_19 is choose:inst|7490:inst1|19 at LC1_C20
+--operation mode is normal
+
+E2_19_lut_out = E2_11 & E2_14;
+E2_19 = DFFEA(E2_19_lut_out, !GLOBAL(E1_7), , , , , );
+
+
+--E7_19 is choose:inst|7490:inst6|19 at LC4_C24
+--operation mode is normal
+
+E7_19_lut_out = E7_11 & E7_14;
+E7_19 = DFFEA(E7_19_lut_out, !E6_7, , , , , );
+
+
+--E6_19 is choose:inst|7490:inst5|19 at LC1_C14
+--operation mode is normal
+
+E6_19_lut_out = E6_11 & E6_14;
+E6_19 = DFFEA(E6_19_lut_out, !E5_7, , , , , );
+
+
+--E5_19 is choose:inst|7490:inst4|19 at LC2_C22
+--operation mode is normal
+
+E5_19_lut_out = E5_11 & E5_14;
+E5_19 = DFFEA(E5_19_lut_out, !E4_7, , , , , );
+
+
+--E4_19 is choose:inst|7490:inst3|19 at LC1_C18
+--operation mode is normal
+
+E4_19_lut_out = E4_11 & E4_14;
+E4_19 = DFFEA(E4_19_lut_out, !E3_7, , , , , );
+
+
+--E1_11 is choose:inst|7490:inst|11 at LC3_B4
+--operation mode is normal
+
+E1_11_lut_out = !E1_19 & !E1_11;
+E1_11 = DFFEA(E1_11_lut_out, !GLOBAL(CP), , , , , );
+
+
+--E1_14 is choose:inst|7490:inst|14 at LC4_B4
+--operation mode is normal
+
+E1_14_lut_out = !E1_14;
+E1_14 = DFFEA(E1_14_lut_out, !GLOBAL(CP), , , E1_11, , );
+
+
+--E3_11 is choose:inst|7490:inst2|11 at LC2_C16
+--operation mode is normal
+
+E3_11_lut_out = !E3_19 & !E3_11;
+E3_11 = DFFEA(E3_11_lut_out, !E2_7, , , , , );
+
+
+--E3_14 is choose:inst|7490:inst2|14 at LC5_C16
+--operation mode is normal
+
+E3_14_lut_out = !E3_14;
+E3_14 = DFFEA(E3_14_lut_out, !E2_7, , , E3_11, , );
+
+
+--E2_11 is choose:inst|7490:inst1|11 at LC2_C20
+--operation mode is normal
+
+E2_11_lut_out = !E2_19 & !E2_11;
+E2_11 = DFFEA(E2_11_lut_out, !GLOBAL(E1_7), , , , , );
+
+
+--E2_14 is choose:inst|7490:inst1|14 at LC3_C20
+--operation mode is normal
+
+E2_14_lut_out = !E2_14;
+E2_14 = DFFEA(E2_14_lut_out, !GLOBAL(E1_7), , , E2_11, , );
+
+
+--E7_11 is choose:inst|7490:inst6|11 at LC5_C24
+--operation mode is normal
+
+E7_11_lut_out = !E7_19 & !E7_11;
+E7_11 = DFFEA(E7_11_lut_out, !E6_7, , , , , );
+
+
+--E7_14 is choose:inst|7490:inst6|14 at LC6_C24
+--operation mode is normal
+
+E7_14_lut_out = !E7_14;
+E7_14 = DFFEA(E7_14_lut_out, !E6_7, , , E7_11, , );
+
+
+--E6_11 is choose:inst|7490:inst5|11 at LC3_C14
+--operation mode is normal
+
+E6_11_lut_out = !E6_19 & !E6_11;
+E6_11 = DFFEA(E6_11_lut_out, !E5_7, , , , , );
+
+
+--E6_14 is choose:inst|7490:inst5|14 at LC4_C14
+--operation mode is normal
+
+E6_14_lut_out = !E6_14;
+E6_14 = DFFEA(E6_14_lut_out, !E5_7, , , E6_11, , );
+
+
+--E5_11 is choose:inst|7490:inst4|11 at LC3_C22
+--operation mode is normal
+
+E5_11_lut_out = !E5_19 & !E5_11;
+E5_11 = DFFEA(E5_11_lut_out, !E4_7, , , , , );
+
+
+--E5_14 is choose:inst|7490:inst4|14 at LC4_C22
+--operation mode is normal
+
+E5_14_lut_out = !E5_14;
+E5_14 = DFFEA(E5_14_lut_out, !E4_7, , , E5_11, , );
+
+
+--E4_11 is choose:inst|7490:inst3|11 at LC2_C18
+--operation mode is normal
+
+E4_11_lut_out = !E4_19 & !E4_11;
+E4_11 = DFFEA(E4_11_lut_out, !E3_7, , , , , );
+
+
+--E4_14 is choose:inst|7490:inst3|14 at LC3_C18
+--operation mode is normal
+
+E4_14_lut_out = !E4_14;
+E4_14 = DFFEA(E4_14_lut_out, !E3_7, , , E4_11, , );
+
+
+--C is C at PIN_49
+--operation mode is input
+
+C = INPUT();
+
+
+--B is B at PIN_48
+--operation mode is input
+
+B = INPUT();
+
+
+--A is A at PIN_47
+--operation mode is input
+
+A = INPUT();
+
+
+--CP is CP at PIN_55
+--operation mode is input
+
+CP = INPUT();
+
+
+--Y0 is Y0 at PIN_32
+--operation mode is output
+
+Y0 = OUTPUT(D1L1);
+
+
+--Y1 is Y1 at PIN_31
+--operation mode is output
+
+Y1 = OUTPUT(D1L2);
+
+
+--Y2 is Y2 at PIN_30
+--operation mode is output
+
+Y2 = OUTPUT(D1L3);
+
+
+--Y3 is Y3 at PIN_29
+--operation mode is output
+
+Y3 = OUTPUT(D1L4);
+
+
+--Y4 is Y4 at PIN_28
+--operation mode is output
+
+Y4 = OUTPUT(D1L5);
+
+
+--Y5 is Y5 at PIN_27
+--operation mode is output
+
+Y5 = OUTPUT(D1L6);
+
+
+--Y6 is Y6 at PIN_26
+--operation mode is output
+
+Y6 = OUTPUT(D1L7);
+
+
+--Y7 is Y7 at PIN_23
+--operation mode is output
+
+Y7 = OUTPUT(D1L8);
+
+
+--DE2 is DE2 at PIN_36
+--operation mode is output
+
+DE2 = OUTPUT(VCC);
+
+
+--DE3 is DE3 at PIN_37
+--operation mode is output
+
+DE3 = OUTPUT(VCC);
+
+
+--DE1 is DE1 at PIN_33
+--operation mode is output
+
+DE1 = OUTPUT(GND);
+
+

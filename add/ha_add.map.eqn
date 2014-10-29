@@ -1,0 +1,84 @@
+--C2_inst1 is fa_add:inst|ha_add:inst1|inst1
+--operation mode is normal
+
+C2_inst1 = A1 $ X;
+
+
+--C4L1 is fa_add:inst8|ha_add:inst1|inst1~43
+--operation mode is normal
+
+C4L1 = A2 $ (!X & A1);
+
+
+--C6_inst1 is fa_add:inst9|ha_add:inst1|inst1
+--operation mode is normal
+
+C6_inst1 = A3 $ (X & !A2 # !X & A2 # A1);
+
+
+--B2L1 is fa_add:inst8|inst4~20
+--operation mode is normal
+
+B2L1 = A2 # A1 & !X;
+
+
+--C8_inst1 is fa_add:inst10|ha_add:inst1|inst1
+--operation mode is normal
+
+C8_inst1 = A4 $ (X & !B2L1 & !A3 # !X & B2L1 & A3);
+
+
+--A1 is A1
+--operation mode is input
+
+A1 = INPUT();
+
+
+--X is X
+--operation mode is input
+
+X = INPUT();
+
+
+--A2 is A2
+--operation mode is input
+
+A2 = INPUT();
+
+
+--A3 is A3
+--operation mode is input
+
+A3 = INPUT();
+
+
+--A4 is A4
+--operation mode is input
+
+A4 = INPUT();
+
+
+--S1 is S1
+--operation mode is output
+
+S1 = OUTPUT(!C2_inst1);
+
+
+--S2 is S2
+--operation mode is output
+
+S2 = OUTPUT(!C4L1);
+
+
+--S3 is S3
+--operation mode is output
+
+S3 = OUTPUT(C6_inst1);
+
+
+--S4 is S4
+--operation mode is output
+
+S4 = OUTPUT(C8_inst1);
+
+

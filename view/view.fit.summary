@@ -1,0 +1,11 @@
+Flow Status : Successful - Wed Nov 28 13:27:58 2007
+Quartus II Version : 4.2 Build 157 12/07/2004 SJ Full Version
+Revision Name : view
+Top-level Entity Name : view
+Family : FLEX10K
+Device : EPF10K10TC144-4
+Timing Models : Final
+Met timing requirements : N/A
+Total logic elements : 35 / 576 ( 6 % )
+Total pins : 18 / 102 ( 17 % )
+Total memory bits : 64 / 6,144 ( 1 % )

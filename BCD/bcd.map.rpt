@@ -1,0 +1,216 @@
+Analysis & Synthesis report for bcd
+Tue Nov 27 14:57:58 2007
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Hierarchy
+  5. Analysis & Synthesis Resource Utilization by Entity
+  6. Analysis & Synthesis Equations
+  7. Analysis & Synthesis Source Files Read
+  8. Analysis & Synthesis Resource Usage Summary
+  9. WYSIWYG Cells
+ 10. General Register Statistics
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Nov 27 14:57:58 2007    ;
+; Quartus II Version          ; 4.2 Build 157 12/07/2004 SJ Full Version ;
+; Revision Name               ; bcd                                      ;
+; Top-level Entity Name       ; bcd                                      ;
+; Family                      ; FLEX10K                                  ;
+; Total logic elements        ; 10                                       ;
+; Total pins                  ; 16                                       ;
+; Total memory bits           ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                          ;
++------------------------------------------------------+-----------------+---------------+
+; Option                                               ; Setting         ; Default Value ;
++------------------------------------------------------+-----------------+---------------+
+; Device                                               ; EPF10K10TC144-4 ;               ;
+; Family name                                          ; FLEX10K         ; Stratix       ;
+; Use smart compilation                                ; Normal          ; Normal        ;
+; Create Debugging Nodes for IP Cores                  ; off             ; off           ;
+; Preserve fewer node names                            ; On              ; On            ;
+; Disable OpenCore Plus hardware evaluation            ; Off             ; Off           ;
+; Verilog Version                                      ; Verilog_2001    ; Verilog_2001  ;
+; VHDL Version                                         ; VHDL93          ; VHDL93        ;
+; Top-level entity name                                ; bcd             ; bcd           ;
+; State Machine Processing                             ; Auto            ; Auto          ;
+; Extract Verilog State Machines                       ; On              ; On            ;
+; Extract VHDL State Machines                          ; On              ; On            ;
+; NOT Gate Push-Back                                   ; On              ; On            ;
+; Power-Up Don't Care                                  ; On              ; On            ;
+; Remove Redundant Logic Cells                         ; Off             ; Off           ;
+; Remove Duplicate Registers                           ; On              ; On            ;
+; Ignore CARRY Buffers                                 ; Off             ; Off           ;
+; Ignore CASCADE Buffers                               ; Off             ; Off           ;
+; Ignore GLOBAL Buffers                                ; Off             ; Off           ;
+; Ignore ROW GLOBAL Buffers                            ; Off             ; Off           ;
+; Ignore LCELL Buffers                                 ; Off             ; Off           ;
+; Ignore SOFT Buffers                                  ; On              ; On            ;
+; Limit AHDL Integers to 32 Bits                       ; Off             ; Off           ;
+; Auto Implement in ROM                                ; Off             ; Off           ;
+; Optimization Technique -- FLEX 10K/10KE/10KA/ACEX 1K ; Area            ; Area          ;
+; Carry Chain Length -- FLEX 10K                       ; 32              ; 32            ;
+; Cascade Chain Length                                 ; 2               ; 2             ;
+; Auto Carry Chains                                    ; On              ; On            ;
+; Auto Open-Drain Pins                                 ; On              ; On            ;
+; Remove Duplicate Logic                               ; On              ; On            ;
+; Auto ROM Replacement                                 ; On              ; On            ;
+; Auto RAM Replacement                                 ; On              ; On            ;
+; Auto Clock Enable Replacement                        ; On              ; On            ;
+; Auto Resource Sharing                                ; Off             ; Off           ;
+; Allow Any RAM Size For Recognition                   ; Off             ; Off           ;
+; Allow Any ROM Size For Recognition                   ; Off             ; Off           ;
++------------------------------------------------------+-----------------+---------------+
+
+
++-----------+
+; Hierarchy ;
++-----------+
+bcd
+ |-- 74148:inst
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                        ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+---------------------+
+; |bcd                       ; 10 (10)     ; 0            ; 0           ; 16   ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |bcd                ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+---------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in D:/061300423/BCD/bcd.map.eqn.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                       ;
++----------------------------------+-----------------+---------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Name with Absolute Path                            ;
++----------------------------------+-----------------+---------------------------------------------------------+
+; bcd.bdf                          ; yes             ; D:/061300423/BCD/bcd.bdf                                ;
+; 74148.bdf                        ; yes             ; c:/altera/quartus42/libraries/others/maxplus2/74148.bdf ;
++----------------------------------+-----------------+---------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++---------------------------------+-----------+
+; Resource                        ; Usage     ;
++---------------------------------+-----------+
+; Logic cells                     ; 10        ;
+; Total combinational functions   ; 10        ;
+; Total 4-input functions         ; 7         ;
+; Total 3-input functions         ; 2         ;
+; Total 2-input functions         ; 1         ;
+; Total 1-input functions         ; 0         ;
+; Total 0-input functions         ; 0         ;
+; Combinational cells for routing ; 0         ;
+; Total registers                 ; 0         ;
+; I/O pins                        ; 16        ;
+; Maximum fan-out node            ; I8        ;
+; Maximum fan-out                 ; 4         ;
+; Total fan-out                   ; 41        ;
+; Average fan-out                 ; 1.58      ;
++---------------------------------+-----------+
+
+
++----------------------------------------------------------------+
+; WYSIWYG Cells                                                  ;
++--------------------------------------------------------+-------+
+; Statistic                                              ; Value ;
++--------------------------------------------------------+-------+
+; Number of WYSIWYG cells                                ; 0     ;
+; Number of synthesis-generated cells                    ; 10    ;
+; Number of WYSIWYG LUTs                                 ; 0     ;
+; Number of synthesis-generated LUTs                     ; 10    ;
+; Number of WYSIWYG registers                            ; 0     ;
+; Number of synthesis-generated registers                ; 0     ;
+; Number of cells with combinational logic only          ; 10    ;
+; Number of cells with registers only                    ; 0     ;
+; Number of cells with combinational logic and registers ; 0     ;
++--------------------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Output Enable      ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.2 Build 157 12/07/2004 SJ Full Version
+    Info: Processing started: Tue Nov 27 14:57:57 2007
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off bcd -c bcd
+Info: Found 1 design units, including 1 entities, in source file bcd.bdf
+    Info: Found entity 1: bcd
+Warning: Port "EIN" of type 74148 and instance "inst" is missing source signal
+Info: Found 1 design units, including 1 entities, in source file c:/altera/quartus42/libraries/others/maxplus2/74148.bdf
+    Info: Found entity 1: 74148
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "COM" stuck at VCC
+Info: Implemented 26 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 6 output pins
+    Info: Implemented 10 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Processing ended: Tue Nov 27 14:57:58 2007
+    Info: Elapsed time: 00:00:01
+
+

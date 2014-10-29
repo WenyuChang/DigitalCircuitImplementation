@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 50.300 ns
+From           : num:inst5|inst1
+To             : OA
+From Clock     : F10MHz
+To Clock       : 
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 41.400 ns
+From           : K1
+To             : OA
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+Type           : Clock Setup: 'F10MHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
+From           : choose:inst13|7490:inst|11
+To             : choose:inst13|7490:inst|19
+From Clock     : F10MHz
+To Clock       : F10MHz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,131 @@
+|exhange
+S1 <= fa_add:inst.S
+A1 => fa_add:inst.A
+X => fa_add:inst.C0
+X => inst15.IN0
+X => fa_add:inst9.B
+X => fa_add:inst10.B
+S2 <= fa_add:inst8.S
+A2 => fa_add:inst8.A
+S3 <= fa_add:inst9.S
+A3 => fa_add:inst9.A
+S4 <= fa_add:inst10.S
+A4 => fa_add:inst10.A
+
+
+|exhange|fa_add:inst
+C <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => ha_add:inst.A
+B => ha_add:inst.B
+C0 => ha_add:inst1.B
+S <= ha_add:inst1.S
+COM <= <VCC>
+
+
+|exhange|fa_add:inst|ha_add:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst|ha_add:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst8
+C <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => ha_add:inst.A
+B => ha_add:inst.B
+C0 => ha_add:inst1.B
+S <= ha_add:inst1.S
+COM <= <VCC>
+
+
+|exhange|fa_add:inst8|ha_add:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst8|ha_add:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst9
+C <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => ha_add:inst.A
+B => ha_add:inst.B
+C0 => ha_add:inst1.B
+S <= ha_add:inst1.S
+COM <= <VCC>
+
+
+|exhange|fa_add:inst9|ha_add:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst9|ha_add:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst10
+C <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => ha_add:inst.A
+B => ha_add:inst.B
+C0 => ha_add:inst1.B
+S <= ha_add:inst1.S
+COM <= <VCC>
+
+
+|exhange|fa_add:inst10|ha_add:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+
+|exhange|fa_add:inst10|ha_add:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+COM <= <VCC>
+
+

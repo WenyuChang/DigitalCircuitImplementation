@@ -1,0 +1,342 @@
+|view
+OA <= view1:inst9.a
+F10MHz => choose:inst13.CP
+K0 => ROM1:inst8.address[0]
+K1 => ROM1:inst8.address[1]
+OB <= view1:inst9.b
+OC <= view1:inst9.c
+OD <= view1:inst9.d
+OE <= view1:inst9.e
+OF <= view1:inst9.f
+OG <= view1:inst9.g
+dp <= 74153M:inst6.Y
+dp3 => 74153M:inst6.C3
+dp2 => 74153M:inst6.C2
+dp1 => 74153M:inst6.C1
+dp0 => 74153M:inst6.C0
+DE1 <= num:inst5.Q0
+DE2 <= num:inst5.Q1
+DE3 <= <GND>
+
+
+|view|view1:inst9
+a <= a~1.DB_MAX_OUTPUT_PORT_TYPE
+b <= b~1.DB_MAX_OUTPUT_PORT_TYPE
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+d <= d~0.DB_MAX_OUTPUT_PORT_TYPE
+e <= e~0.DB_MAX_OUTPUT_PORT_TYPE
+f <= f~0.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|74153M:inst
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+
+|view|num:inst5
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CP => inst.CLK
+CP => inst1.CLK
+Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13
+10MHz <= CP.DB_MAX_OUTPUT_PORT_TYPE
+CP => 10MHz.DATAIN
+CP => 7490:inst.CLKB
+1MHz <= 7490:inst.QA
+100KHz <= 7490:inst1.QA
+10KHz <= 7490:inst2.QA
+1KHz <= 7490:inst3.QA
+100Hz <= 7490:inst4.QA
+10Hz <= 7490:inst5.QA
+1Hz <= 7490:inst6.QA
+
+
+|view|choose:inst13|7490:inst
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst1
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst2
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst3
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst4
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst5
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|choose:inst13|7490:inst6
+QA <= 7.DB_MAX_OUTPUT_PORT_TYPE
+CLRA => 9.IN0
+CLRB => 9.IN1
+CLKA => 32.IN0
+SET9A => 8.IN0
+SET9B => 8.IN1
+QB <= 11.DB_MAX_OUTPUT_PORT_TYPE
+CLKB => 33.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 19.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|ROM1:inst8
+address[0] => address[0]~1.IN1
+address[1] => address[1]~0.IN1
+q[0] <= lpm_rom:lpm_rom_component.q
+q[1] <= lpm_rom:lpm_rom_component.q
+q[2] <= lpm_rom:lpm_rom_component.q
+q[3] <= lpm_rom:lpm_rom_component.q
+q[4] <= lpm_rom:lpm_rom_component.q
+q[5] <= lpm_rom:lpm_rom_component.q
+q[6] <= lpm_rom:lpm_rom_component.q
+q[7] <= lpm_rom:lpm_rom_component.q
+q[8] <= lpm_rom:lpm_rom_component.q
+q[9] <= lpm_rom:lpm_rom_component.q
+q[10] <= lpm_rom:lpm_rom_component.q
+q[11] <= lpm_rom:lpm_rom_component.q
+q[12] <= lpm_rom:lpm_rom_component.q
+q[13] <= lpm_rom:lpm_rom_component.q
+q[14] <= lpm_rom:lpm_rom_component.q
+q[15] <= lpm_rom:lpm_rom_component.q
+
+
+|view|ROM1:inst8|lpm_rom:lpm_rom_component
+address[0] => altrom:srom.address[0]
+address[1] => altrom:srom.address[1]
+inclock => ~NO_FANOUT~
+outclock => ~NO_FANOUT~
+memenab => otri[15].OE
+memenab => otri[14].OE
+memenab => otri[13].OE
+memenab => otri[12].OE
+memenab => otri[11].OE
+memenab => otri[10].OE
+memenab => otri[9].OE
+memenab => otri[8].OE
+memenab => otri[7].OE
+memenab => otri[6].OE
+memenab => otri[5].OE
+memenab => otri[4].OE
+memenab => otri[3].OE
+memenab => otri[2].OE
+memenab => otri[1].OE
+memenab => otri[0].OE
+q[0] <= otri[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= otri[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= otri[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= otri[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= otri[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= otri[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= otri[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= otri[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= otri[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= otri[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= otri[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= otri[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= otri[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= otri[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= otri[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= otri[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|view|ROM1:inst8|lpm_rom:lpm_rom_component|altrom:srom
+address[0] => segment[0][15].WADDR
+address[0] => segment[0][15].RADDR
+address[0] => segment[0][14].WADDR
+address[0] => segment[0][14].RADDR
+address[0] => segment[0][13].WADDR
+address[0] => segment[0][13].RADDR
+address[0] => segment[0][12].WADDR
+address[0] => segment[0][12].RADDR
+address[0] => segment[0][11].WADDR
+address[0] => segment[0][11].RADDR
+address[0] => segment[0][10].WADDR
+address[0] => segment[0][10].RADDR
+address[0] => segment[0][9].WADDR
+address[0] => segment[0][9].RADDR
+address[0] => segment[0][8].WADDR
+address[0] => segment[0][8].RADDR
+address[0] => segment[0][7].WADDR
+address[0] => segment[0][7].RADDR
+address[0] => segment[0][6].WADDR
+address[0] => segment[0][6].RADDR
+address[0] => segment[0][5].WADDR
+address[0] => segment[0][5].RADDR
+address[0] => segment[0][4].WADDR
+address[0] => segment[0][4].RADDR
+address[0] => segment[0][3].WADDR
+address[0] => segment[0][3].RADDR
+address[0] => segment[0][2].WADDR
+address[0] => segment[0][2].RADDR
+address[0] => segment[0][1].WADDR
+address[0] => segment[0][1].RADDR
+address[0] => segment[0][0].WADDR
+address[0] => segment[0][0].RADDR
+address[1] => segment[0][15].WADDR1
+address[1] => segment[0][15].RADDR1
+address[1] => segment[0][14].WADDR1
+address[1] => segment[0][14].RADDR1
+address[1] => segment[0][13].WADDR1
+address[1] => segment[0][13].RADDR1
+address[1] => segment[0][12].WADDR1
+address[1] => segment[0][12].RADDR1
+address[1] => segment[0][11].WADDR1
+address[1] => segment[0][11].RADDR1
+address[1] => segment[0][10].WADDR1
+address[1] => segment[0][10].RADDR1
+address[1] => segment[0][9].WADDR1
+address[1] => segment[0][9].RADDR1
+address[1] => segment[0][8].WADDR1
+address[1] => segment[0][8].RADDR1
+address[1] => segment[0][7].WADDR1
+address[1] => segment[0][7].RADDR1
+address[1] => segment[0][6].WADDR1
+address[1] => segment[0][6].RADDR1
+address[1] => segment[0][5].WADDR1
+address[1] => segment[0][5].RADDR1
+address[1] => segment[0][4].WADDR1
+address[1] => segment[0][4].RADDR1
+address[1] => segment[0][3].WADDR1
+address[1] => segment[0][3].RADDR1
+address[1] => segment[0][2].WADDR1
+address[1] => segment[0][2].RADDR1
+address[1] => segment[0][1].WADDR1
+address[1] => segment[0][1].RADDR1
+address[1] => segment[0][0].WADDR1
+address[1] => segment[0][0].RADDR1
+clocki => ~NO_FANOUT~
+clocko => ~NO_FANOUT~
+q[0] <= segment[0][0].DATAOUT
+q[1] <= segment[0][1].DATAOUT
+q[2] <= segment[0][2].DATAOUT
+q[3] <= segment[0][3].DATAOUT
+q[4] <= segment[0][4].DATAOUT
+q[5] <= segment[0][5].DATAOUT
+q[6] <= segment[0][6].DATAOUT
+q[7] <= segment[0][7].DATAOUT
+q[8] <= segment[0][8].DATAOUT
+q[9] <= segment[0][9].DATAOUT
+q[10] <= segment[0][10].DATAOUT
+q[11] <= segment[0][11].DATAOUT
+q[12] <= segment[0][12].DATAOUT
+q[13] <= segment[0][13].DATAOUT
+q[14] <= segment[0][14].DATAOUT
+q[15] <= segment[0][15].DATAOUT
+
+
+|view|74153M:inst2
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+
+|view|74153M:inst3
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+
+|view|74153M:inst4
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+
+|view|74153M:inst6
+Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+C0 => 1.IN3
+C1 => 2.IN3
+C2 => 3.IN3
+C3 => 4.IN3
+
+

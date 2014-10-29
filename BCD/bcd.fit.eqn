@@ -1,0 +1,156 @@
+--A1L61 is inst1~41 at LC1_A21
+--operation mode is normal
+
+A1L61 = !I8 & !I9;
+
+
+--A1L32 is inst31~28 at LC6_A21
+--operation mode is normal
+
+A1L32 = !I4 & !I5 & I2 # I3;
+
+
+--A1L42 is inst31~29 at LC3_A21
+--operation mode is normal
+
+A1L42 = A1L61 & A1L32 # I6 # I7;
+
+
+--A1L71 is inst1~42 at LC1_A24
+--operation mode is normal
+
+A1L71 = !I4 & !I5 & !I6 & !I7;
+
+
+--A1L52 is inst32~18 at LC2_A21
+--operation mode is normal
+
+A1L52 = !A1L71 & !I8 & !I9;
+
+
+--A1L81 is inst1~43 at LC5_A21
+--operation mode is normal
+
+A1L81 = !I2 & !I3 & !I8 & !I9;
+
+
+--A1L91 is inst1~44 at LC5_A14
+--operation mode is normal
+
+A1L91 = A1L71 & A1L81 & !I1 & !I0;
+
+
+--A1L22 is inst30~103 at LC4_A21
+--operation mode is normal
+
+A1L22 = I9 # !I8 & A1L02 # I7;
+
+
+--A1L02 is inst30~87 at LC7_A21
+--operation mode is normal
+
+A1L02 = !I6 & I5 # A1L12 & !I4;
+
+
+--A1L12 is inst30~90 at LC1_A16
+--operation mode is normal
+
+A1L12 = I3 # !I2 & I1;
+
+
+--I7 is I7 at PIN_63
+--operation mode is input
+
+I7 = INPUT();
+
+
+--I5 is I5 at PIN_60
+--operation mode is input
+
+I5 = INPUT();
+
+
+--I6 is I6 at PIN_62
+--operation mode is input
+
+I6 = INPUT();
+
+
+--I8 is I8 at PIN_64
+--operation mode is input
+
+I8 = INPUT();
+
+
+--I9 is I9 at PIN_65
+--operation mode is input
+
+I9 = INPUT();
+
+
+--I3 is I3 at PIN_51
+--operation mode is input
+
+I3 = INPUT();
+
+
+--I1 is I1 at PIN_48
+--operation mode is input
+
+I1 = INPUT();
+
+
+--I2 is I2 at PIN_49
+--operation mode is input
+
+I2 = INPUT();
+
+
+--I4 is I4 at PIN_59
+--operation mode is input
+
+I4 = INPUT();
+
+
+--I0 is I0 at PIN_47
+--operation mode is input
+
+I0 = INPUT();
+
+
+--A0 is A0 at PIN_10
+--operation mode is output
+
+A0 = OUTPUT(A1L22);
+
+
+--A1 is A1 at PIN_9
+--operation mode is output
+
+A1 = OUTPUT(A1L42);
+
+
+--A2 is A2 at PIN_8
+--operation mode is output
+
+A2 = OUTPUT(A1L52);
+
+
+--A3 is A3 at PIN_7
+--operation mode is output
+
+A3 = OUTPUT(!A1L61);
+
+
+--COM is COM at PIN_141
+--operation mode is output
+
+COM = OUTPUT(VCC);
+
+
+--Yex is Yex at PIN_11
+--operation mode is output
+
+Yex = OUTPUT(!A1L91);
+
+

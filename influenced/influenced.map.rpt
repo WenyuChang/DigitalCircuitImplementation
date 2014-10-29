@@ -1,0 +1,364 @@
+Analysis & Synthesis report for influenced
+Wed Nov 28 16:21:39 2007
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Hierarchy
+  5. Analysis & Synthesis Resource Utilization by Entity
+  6. Analysis & Synthesis Equations
+  7. Analysis & Synthesis Source Files Read
+  8. Analysis & Synthesis Resource Usage Summary
+  9. WYSIWYG Cells
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Nov 28 16:21:39 2007    ;
+; Quartus II Version          ; 4.2 Build 157 12/07/2004 SJ Full Version ;
+; Revision Name               ; influenced                               ;
+; Top-level Entity Name       ; influenced                               ;
+; Family                      ; FLEX10K                                  ;
+; Total logic elements        ; 89                                       ;
+; Total pins                  ; 18                                       ;
+; Total memory bits           ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                          ;
++------------------------------------------------------+-----------------+---------------+
+; Option                                               ; Setting         ; Default Value ;
++------------------------------------------------------+-----------------+---------------+
+; Device                                               ; EPF10K10TC144-4 ;               ;
+; Family name                                          ; FLEX10K         ; Stratix       ;
+; Use smart compilation                                ; Normal          ; Normal        ;
+; Create Debugging Nodes for IP Cores                  ; off             ; off           ;
+; Preserve fewer node names                            ; On              ; On            ;
+; Disable OpenCore Plus hardware evaluation            ; Off             ; Off           ;
+; Verilog Version                                      ; Verilog_2001    ; Verilog_2001  ;
+; VHDL Version                                         ; VHDL93          ; VHDL93        ;
+; Top-level entity name                                ; influenced      ; influenced    ;
+; State Machine Processing                             ; Auto            ; Auto          ;
+; Extract Verilog State Machines                       ; On              ; On            ;
+; Extract VHDL State Machines                          ; On              ; On            ;
+; NOT Gate Push-Back                                   ; On              ; On            ;
+; Power-Up Don't Care                                  ; On              ; On            ;
+; Remove Redundant Logic Cells                         ; Off             ; Off           ;
+; Remove Duplicate Registers                           ; On              ; On            ;
+; Ignore CARRY Buffers                                 ; Off             ; Off           ;
+; Ignore CASCADE Buffers                               ; Off             ; Off           ;
+; Ignore GLOBAL Buffers                                ; Off             ; Off           ;
+; Ignore ROW GLOBAL Buffers                            ; Off             ; Off           ;
+; Ignore LCELL Buffers                                 ; Off             ; Off           ;
+; Ignore SOFT Buffers                                  ; On              ; On            ;
+; Limit AHDL Integers to 32 Bits                       ; Off             ; Off           ;
+; Auto Implement in ROM                                ; Off             ; Off           ;
+; Optimization Technique -- FLEX 10K/10KE/10KA/ACEX 1K ; Area            ; Area          ;
+; Carry Chain Length -- FLEX 10K                       ; 32              ; 32            ;
+; Cascade Chain Length                                 ; 2               ; 2             ;
+; Auto Carry Chains                                    ; On              ; On            ;
+; Auto Open-Drain Pins                                 ; On              ; On            ;
+; Remove Duplicate Logic                               ; On              ; On            ;
+; Auto ROM Replacement                                 ; On              ; On            ;
+; Auto RAM Replacement                                 ; On              ; On            ;
+; Auto Clock Enable Replacement                        ; On              ; On            ;
+; Auto Resource Sharing                                ; Off             ; Off           ;
+; Allow Any RAM Size For Recognition                   ; Off             ; Off           ;
+; Allow Any ROM Size For Recognition                   ; Off             ; Off           ;
++------------------------------------------------------+-----------------+---------------+
+
+
++-----------+
+; Hierarchy ;
++-----------+
+influenced
+ |-- choose:inst4
+      |-- 7490:inst
+      |-- 7490:inst1
+      |-- 7490:inst2
+      |-- 7490:inst3
+      |-- 7490:inst4
+      |-- 7490:inst5
+      |-- 7490:inst6
+ |-- 74169:inst5
+ |-- 74169:inst6
+ |-- viewnew1:inst13
+      |-- 74153M:inst
+      |-- 74153M:inst2
+      |-- 74153M:inst3
+      |-- 74153M:inst4
+      |-- num:inst5
+      |-- 74153M:inst6
+      |-- view2:inst9
+      |-- 7490:inst10
+      |-- 7490:inst11
+      |-- 7490:inst12
+      |-- choose:inst13
+           |-- 7490:inst
+           |-- 7490:inst1
+           |-- 7490:inst2
+           |-- 7490:inst3
+           |-- 7490:inst4
+           |-- 7490:inst5
+           |-- 7490:inst6
+      |-- 7490:inst14
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------------------------------------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                  ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------------------------------------------------+
+; |influenced                ; 89 (4)      ; 64           ; 0           ; 18   ; 25 (2)       ; 36 (0)            ; 28 (2)           ; 0 (0)           ; |influenced                                          ;
+;    |74169:inst5|           ; 7 (7)       ; 4            ; 0           ; 0    ; 3 (3)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; |influenced|74169:inst5                              ;
+;    |74169:inst6|           ; 8 (8)       ; 4            ; 0           ; 0    ; 4 (4)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; |influenced|74169:inst6                              ;
+;    |choose:inst4|          ; 20 (0)      ; 20           ; 0           ; 0    ; 0 (0)        ; 10 (0)            ; 10 (0)           ; 0 (0)           ; |influenced|choose:inst4                             ;
+;       |7490:inst1|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|choose:inst4|7490:inst1                  ;
+;       |7490:inst2|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|choose:inst4|7490:inst2                  ;
+;       |7490:inst3|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|choose:inst4|7490:inst3                  ;
+;       |7490:inst4|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|choose:inst4|7490:inst4                  ;
+;       |7490:inst|          ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|choose:inst4|7490:inst                   ;
+;    |viewnew1:inst13|       ; 50 (0)      ; 34           ; 0           ; 0    ; 16 (0)       ; 18 (0)            ; 16 (0)           ; 0 (0)           ; |influenced|viewnew1:inst13                          ;
+;       |74153M:inst2|       ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|74153M:inst2             ;
+;       |74153M:inst3|       ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|74153M:inst3             ;
+;       |74153M:inst4|       ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|74153M:inst4             ;
+;       |74153M:inst6|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|74153M:inst6             ;
+;       |74153M:inst|        ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|74153M:inst              ;
+;       |7490:inst10|        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|7490:inst10              ;
+;       |7490:inst11|        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|7490:inst11              ;
+;       |7490:inst12|        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|7490:inst12              ;
+;       |7490:inst14|        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|7490:inst14              ;
+;       |choose:inst13|      ; 16 (0)      ; 16           ; 0           ; 0    ; 0 (0)        ; 8 (0)             ; 8 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|choose:inst13            ;
+;          |7490:inst1|      ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|choose:inst13|7490:inst1 ;
+;          |7490:inst2|      ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|choose:inst13|7490:inst2 ;
+;          |7490:inst3|      ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|choose:inst13|7490:inst3 ;
+;          |7490:inst|       ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; |influenced|viewnew1:inst13|choose:inst13|7490:inst  ;
+;       |num:inst5|          ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|num:inst5                ;
+;       |view2:inst9|        ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |influenced|viewnew1:inst13|view2:inst9              ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------------------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in D:/061300423/influenced/influenced.map.eqn.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                        ;
++----------------------------------+-----------------+----------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Name with Absolute Path                             ;
++----------------------------------+-----------------+----------------------------------------------------------+
+; ../view/view.tdf                 ; yes             ; D:/061300423/view/view.tdf                               ;
+; ../view/num.bdf                  ; yes             ; D:/061300423/view/num.bdf                                ;
+; ../view/viewnew1.bdf             ; yes             ; D:/061300423/view/viewnew1.bdf                           ;
+; ../choose/choose.bdf             ; yes             ; D:/061300423/choose/choose.bdf                           ;
+; influenced.bdf                   ; yes             ; D:/061300423/influenced/influenced.bdf                   ;
+; 74169.bdf                        ; yes             ; c:/altera/quartus42/libraries/others/maxplus2/74169.bdf  ;
+; 7490.bdf                         ; yes             ; c:/altera/quartus42/libraries/others/maxplus2/7490.bdf   ;
+; 74153M.bdf                       ; yes             ; c:/altera/quartus42/libraries/others/maxplus2/74153M.bdf ;
++----------------------------------+-----------------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------+--------------------------------+
+; Resource                        ; Usage                          ;
++---------------------------------+--------------------------------+
+; Logic cells                     ; 89                             ;
+; Total combinational functions   ; 53                             ;
+; Total 4-input functions         ; 17                             ;
+; Total 3-input functions         ; 2                              ;
+; Total 2-input functions         ; 32                             ;
+; Total 1-input functions         ; 0                              ;
+; Total 0-input functions         ; 2                              ;
+; Combinational cells for routing ; 0                              ;
+; Total registers                 ; 64                             ;
+; I/O pins                        ; 18                             ;
+; Maximum fan-out node            ; viewnew1:inst13|num:inst5|inst ;
+; Maximum fan-out                 ; 12                             ;
+; Total fan-out                   ; 279                            ;
+; Average fan-out                 ; 2.61                           ;
++---------------------------------+--------------------------------+
+
+
++----------------------------------------------------------------+
+; WYSIWYG Cells                                                  ;
++--------------------------------------------------------+-------+
+; Statistic                                              ; Value ;
++--------------------------------------------------------+-------+
+; Number of WYSIWYG cells                                ; 0     ;
+; Number of synthesis-generated cells                    ; 89    ;
+; Number of WYSIWYG LUTs                                 ; 0     ;
+; Number of synthesis-generated LUTs                     ; 53    ;
+; Number of WYSIWYG registers                            ; 0     ;
+; Number of synthesis-generated registers                ; 64    ;
+; Number of cells with combinational logic only          ; 25    ;
+; Number of cells with registers only                    ; 36    ;
+; Number of cells with combinational logic and registers ; 28    ;
++--------------------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Output Enable      ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; inst                                   ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.2 Build 157 12/07/2004 SJ Full Version
+    Info: Processing started: Wed Nov 28 16:21:38 2007
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off influenced -c influenced
+Info: Found 1 design units, including 1 entities, in source file ../view/view.tdf
+    Info: Found entity 1: view2
+Info: Found 1 design units, including 1 entities, in source file ../view/view1.bdf
+    Info: Found entity 1: view1
+Info: Found 1 design units, including 1 entities, in source file ../view/num.bdf
+    Info: Found entity 1: num
+Info: Found 1 design units, including 1 entities, in source file ../view/viewnew1.bdf
+    Info: Found entity 1: viewnew1
+Info: Found 1 design units, including 1 entities, in source file ../choose/choose.bdf
+    Info: Found entity 1: choose
+Info: Found 1 design units, including 1 entities, in source file influenced.bdf
+    Info: Found entity 1: influenced
+Warning: Port "D1" of type 74169 and instance "inst6" is missing source signal
+Warning: Port "D2" of type 74169 and instance "inst6" is missing source signal
+Warning: Port "D0" of type 74169 and instance "inst6" is missing source signal
+Warning: Port "D1" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "D2" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "D0" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "U/DN" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "D3" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "LDN" of type 74169 and instance "inst5" is missing source signal
+Warning: Port "U/DN" of type 74169 and instance "inst6" is missing source signal
+Warning: Port "D3" of type 74169 and instance "inst6" is missing source signal
+Warning: Port "LDN" of type 74169 and instance "inst6" is missing source signal
+Warning: Primitive "VCC" of instance "inst10" not used
+Info: Found 1 design units, including 1 entities, in source file c:/altera/quartus42/libraries/others/maxplus2/74169.bdf
+    Info: Found entity 1: 74169
+Warning: Port "SET9A" of type 7490 and instance "inst" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst1" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst1" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst1" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst1" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst2" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst2" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst2" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst2" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst3" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst3" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst3" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst3" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst4" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst4" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst4" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst4" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst5" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst5" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst5" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst5" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst6" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst6" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst6" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst6" is missing source signal
+Info: Found 1 design units, including 1 entities, in source file c:/altera/quartus42/libraries/others/maxplus2/7490.bdf
+    Info: Found entity 1: 7490
+Warning: Port "SET9A" of type 7490 and instance "inst14" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst14" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst14" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst14" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst12" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst12" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst12" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst12" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst11" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst11" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst11" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst11" is missing source signal
+Warning: Port "SET9A" of type 7490 and instance "inst10" is missing source signal
+Warning: Port "CLRA" of type 7490 and instance "inst10" is missing source signal
+Warning: Port "SET9B" of type 7490 and instance "inst10" is missing source signal
+Warning: Port "CLRB" of type 7490 and instance "inst10" is missing source signal
+Warning: Port "GN" of type 74153M and instance "inst" is missing source signal
+Warning: Port "GN" of type 74153M and instance "inst2" is missing source signal
+Warning: Port "GN" of type 74153M and instance "inst3" is missing source signal
+Warning: Port "GN" of type 74153M and instance "inst4" is missing source signal
+Warning: Port "GN" of type 74153M and instance "inst6" is missing source signal
+Info: Found 1 design units, including 1 entities, in source file c:/altera/quartus42/libraries/others/maxplus2/74153M.bdf
+    Info: Found entity 1: 74153M
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "DE3" stuck at GND
+    Warning: Pin "COM" stuck at VCC
+Info: Registers with preset signals will power-up high
+Info: Implemented 107 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 15 output pins
+    Info: Implemented 89 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Processing ended: Wed Nov 28 16:21:39 2007
+    Info: Elapsed time: 00:00:01
+
+

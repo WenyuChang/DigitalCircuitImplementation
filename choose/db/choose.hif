@@ -1,0 +1,142 @@
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+17
+798
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+7490
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|7490.bdf
+1094872652
+23
+# storage
+db|choose.(1).cnf
+db|choose.(1).cnf
+# end
+# entity
+choose
+# case_insensitive
+# source_file
+choose.bdf
+1196159630
+23
+# storage
+db|choose.(0).cnf
+db|choose.(0).cnf
+# end
+# entity
+74138
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74138.bdf
+1094865614
+23
+# storage
+db|choose.(3).cnf
+db|choose.(3).cnf
+# end
+# entity
+74151
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74151.tdf
+1094865856
+6
+# storage
+db|choose.(4).cnf
+db|choose.(4).cnf
+# user_parameter {
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+A
+B
+C
+D0
+D1
+D2
+D3
+D4
+D5
+D6
+D7
+Y
+}
+# include_file {
+c:|altera|quartus42|libraries|megafunctions|aglobal.inc
+1101745276
+}
+# end
+# entity
+f74151
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|f74151.bdf
+1094873890
+23
+# storage
+db|choose.(5).cnf
+db|choose.(5).cnf
+# end
+# entity
+choose1
+# case_insensitive
+# source_file
+choose1.bdf
+1196161100
+23
+# storage
+db|choose.(2).cnf
+db|choose.(2).cnf
+# end
+# complete
+

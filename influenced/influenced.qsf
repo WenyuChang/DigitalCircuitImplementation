@@ -1,0 +1,80 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		influenced_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:48:38  NOVEMBER 27, 2007"
+set_global_assignment -name LAST_QUARTUS_VERSION 6.0
+set_global_assignment -name AHDL_FILE ../view/view.tdf
+set_global_assignment -name BDF_FILE ../view/view1.bdf
+set_global_assignment -name BDF_FILE ../view/num.bdf
+set_global_assignment -name BDF_FILE ../view/viewnew1.bdf
+set_global_assignment -name BDF_FILE ../choose/choose.bdf
+set_global_assignment -name BDF_FILE influenced.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE influenced.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE influenced1.vwf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_47 -to PS1
+set_location_assignment PIN_7 -to LED1
+set_location_assignment PIN_55 -to CP1
+set_location_assignment PIN_55 -to CP
+set_location_assignment PIN_63 -to PS2
+set_location_assignment PIN_8 -to LED2
+set_location_assignment PIN_23 -to OA
+set_location_assignment PIN_26 -to OB
+set_location_assignment PIN_27 -to OC
+set_location_assignment PIN_28 -to OD
+set_location_assignment PIN_29 -to OE
+set_location_assignment PIN_30 -to OF
+set_location_assignment PIN_31 -to OG
+set_location_assignment PIN_33 -to DE1
+set_location_assignment PIN_36 -to DE2
+set_location_assignment PIN_37 -to DE3
+set_location_assignment PIN_32 -to DP
+set_location_assignment PIN_141 -to COM
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY FLEX10K
+set_global_assignment -name TOP_LEVEL_ENTITY influenced
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE "EPF10K10TC144-4"
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name GLITCH_INTERVAL "1 ns"
+set_global_assignment -name VECTOR_INPUT_SOURCE influenced1.vwf

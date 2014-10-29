@@ -1,0 +1,630 @@
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+17
+798
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+7448
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|7448.bdf
+1094870218
+23
+# storage
+db|view.(1).cnf
+db|view.(1).cnf
+# end
+# entity
+74153M
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74153M.bdf
+1094865924
+23
+# storage
+db|view.(2).cnf
+db|view.(2).cnf
+# end
+# entity
+choose
+# case_insensitive
+# source_file
+..|choose|choose.bdf
+1196159630
+23
+# storage
+db|view.(4).cnf
+db|view.(4).cnf
+# end
+# entity
+7490
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|7490.bdf
+1094872652
+23
+# storage
+db|view.(5).cnf
+db|view.(5).cnf
+# end
+# entity
+lpm_rom0
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lpm_rom0.v
+1196211068
+7
+# storage
+db|view.(6).cnf
+db|view.(6).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+lpm_rom
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|megafunctions|lpm_rom.tdf
+1101745316
+6
+# storage
+db|view.(7).cnf
+db|view.(7).cnf
+# user_parameter {
+LPM_WIDTH
+4
+PARAMETER_DEC
+USR
+LPM_WIDTHAD
+2
+PARAMETER_DEC
+USR
+LPM_NUMWORDS
+4
+PARAMETER_UNKNOWN
+DEF
+LPM_ADDRESS_CONTROL
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_OUTDATA
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_FILE
+rom
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+address
+address
+q
+q
+q
+q
+}
+# include_file {
+c:|altera|quartus42|libraries|megafunctions|altrom.inc
+1094868876
+c:|altera|quartus42|libraries|megafunctions|aglobal42.inc
+1101745276
+}
+# end
+# entity
+lpm_rom
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|megafunctions|lpm_rom.tdf
+1101745316
+6
+# storage
+db|view.(10).cnf
+db|view.(10).cnf
+# user_parameter {
+LPM_WIDTH
+16
+PARAMETER_DEC
+USR
+LPM_WIDTHAD
+2
+PARAMETER_DEC
+USR
+LPM_NUMWORDS
+4
+PARAMETER_UNKNOWN
+DEF
+LPM_ADDRESS_CONTROL
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_OUTDATA
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_FILE
+ROM.hex
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+address
+address
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+}
+# include_file {
+c:|altera|quartus42|libraries|megafunctions|altrom.inc
+1094868876
+c:|altera|quartus42|libraries|megafunctions|aglobal42.inc
+1101745276
+}
+# end
+# entity
+lpm_rom
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|megafunctions|lpm_rom.tdf
+1101745316
+6
+# storage
+db|view.(12).cnf
+db|view.(12).cnf
+# user_parameter {
+LPM_WIDTH
+16
+PARAMETER_DEC
+USR
+LPM_WIDTHAD
+2
+PARAMETER_DEC
+USR
+LPM_NUMWORDS
+4
+PARAMETER_UNKNOWN
+DEF
+LPM_ADDRESS_CONTROL
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_OUTDATA
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_FILE
+ROM1.hex
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+address
+address
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+}
+# include_file {
+c:|altera|quartus42|libraries|megafunctions|altrom.inc
+1094868876
+c:|altera|quartus42|libraries|megafunctions|aglobal42.inc
+1101745276
+}
+# end
+# entity
+altrom
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|megafunctions|altrom.tdf
+1101745298
+6
+# storage
+db|view.(13).cnf
+db|view.(13).cnf
+# user_parameter {
+WIDTH
+16
+PARAMETER_UNKNOWN
+USR
+AD_WIDTH
+2
+PARAMETER_UNKNOWN
+USR
+NUMWORDS
+4
+PARAMETER_UNKNOWN
+USR
+FILE
+ROM1.hex
+PARAMETER_UNKNOWN
+USR
+REGISTERINPUTMODE
+DEFAULT
+PARAMETER_UNKNOWN
+USR
+MAXIMUM_DEPTH
+2048
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+SUPPRESS_MEMORY_CONVERSION_WARNINGS
+OFF
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+address0
+address1
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+q8
+q9
+q10
+q11
+q12
+q13
+q14
+q15
+}
+# include_file {
+c:|altera|quartus42|libraries|others|maxplus2|memmodes.inc
+1094874602
+c:|altera|quartus42|libraries|megafunctions|lpm_decode.inc
+1094870100
+c:|altera|quartus42|libraries|megafunctions|lpm_mux.inc
+1094870318
+c:|altera|quartus42|libraries|megafunctions|altqpram.inc
+1094868820
+c:|altera|quartus42|libraries|megafunctions|altsyncram.inc
+1094868954
+c:|altera|quartus42|libraries|megafunctions|aglobal42.inc
+1101745276
+}
+# memory_file {
+ROM1.hex
+1196220072
+}
+# end
+# entity
+num
+# case_insensitive
+# source_file
+num.bdf
+1196225762
+23
+# storage
+db|view.(3).cnf
+db|view.(3).cnf
+# end
+# entity
+ROM1
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ROM1.v
+1196226908
+7
+# storage
+db|view.(9).cnf
+db|view.(9).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+view
+# case_insensitive
+# source_file
+view.bdf
+1196227284
+23
+# storage
+db|view.(0).cnf
+db|view.(0).cnf
+# end
+# entity
+altrom
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|megafunctions|altrom.tdf
+1101745298
+6
+# storage
+db|view.(11).cnf
+db|view.(11).cnf
+# user_parameter {
+WIDTH
+16
+PARAMETER_UNKNOWN
+USR
+AD_WIDTH
+2
+PARAMETER_UNKNOWN
+USR
+NUMWORDS
+4
+PARAMETER_UNKNOWN
+USR
+FILE
+ROM.hex
+PARAMETER_UNKNOWN
+USR
+REGISTERINPUTMODE
+DEFAULT
+PARAMETER_UNKNOWN
+USR
+MAXIMUM_DEPTH
+2048
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+SUPPRESS_MEMORY_CONVERSION_WARNINGS
+OFF
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+address0
+address1
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+q8
+q9
+q10
+q11
+q12
+q13
+q14
+q15
+}
+# include_file {
+c:|altera|quartus42|libraries|others|maxplus2|memmodes.inc
+1094874602
+c:|altera|quartus42|libraries|megafunctions|lpm_decode.inc
+1094870100
+c:|altera|quartus42|libraries|megafunctions|lpm_mux.inc
+1094870318
+c:|altera|quartus42|libraries|megafunctions|altqpram.inc
+1094868820
+c:|altera|quartus42|libraries|megafunctions|altsyncram.inc
+1094868954
+c:|altera|quartus42|libraries|megafunctions|aglobal42.inc
+1101745276
+}
+# memory_file {
+ROM.hex
+1196227668
+}
+# end
+# entity
+view1
+# case_insensitive
+# source_file
+view1.bdf
+1196213928
+23
+# storage
+db|view.(8).cnf
+db|view.(8).cnf
+# end
+# entity
+view1
+# case_insensitive
+# source_file
+view.tdf
+1196329316
+6
+# storage
+db|view.(14).cnf
+db|view.(14).cnf
+# used_port {
+a
+b
+c
+d
+data_in0
+data_in1
+data_in2
+data_in3
+e
+f
+g
+}
+# end
+# complete
+

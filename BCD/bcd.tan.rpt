@@ -1,0 +1,144 @@
+Timing Analyzer report for bcd
+Tue Nov 27 14:58:05 2007
+Version 4.2 Build 157 12/07/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. tpd
+  5. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                               ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From ; To ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 23.800 ns   ; I2   ; A0 ;            ;          ; 0            ;
+; Total number of failed paths ;       ;               ;             ;      ;    ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EPF10K10TC144-4    ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minumum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Clock Analysis Only                                   ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off clear and preset signal paths                 ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Do Min/Max analysis using Rise/Fall delays            ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Use Clock Latency for PLL offset                      ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++----------------------------------------------------------+
+; tpd                                                      ;
++-------+-------------------+-----------------+------+-----+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To  ;
++-------+-------------------+-----------------+------+-----+
+; N/A   ; None              ; 23.800 ns       ; I2   ; A0  ;
+; N/A   ; None              ; 23.500 ns       ; I1   ; A0  ;
+; N/A   ; None              ; 23.000 ns       ; I3   ; A0  ;
+; N/A   ; None              ; 21.500 ns       ; I4   ; Yex ;
+; N/A   ; None              ; 21.500 ns       ; I5   ; Yex ;
+; N/A   ; None              ; 21.500 ns       ; I6   ; Yex ;
+; N/A   ; None              ; 21.300 ns       ; I4   ; A2  ;
+; N/A   ; None              ; 21.300 ns       ; I5   ; A2  ;
+; N/A   ; None              ; 21.300 ns       ; I6   ; A2  ;
+; N/A   ; None              ; 21.100 ns       ; I8   ; Yex ;
+; N/A   ; None              ; 21.100 ns       ; I2   ; Yex ;
+; N/A   ; None              ; 21.000 ns       ; I7   ; Yex ;
+; N/A   ; None              ; 20.800 ns       ; I3   ; Yex ;
+; N/A   ; None              ; 20.800 ns       ; I7   ; A2  ;
+; N/A   ; None              ; 20.600 ns       ; I9   ; Yex ;
+; N/A   ; None              ; 19.500 ns       ; I4   ; A1  ;
+; N/A   ; None              ; 19.500 ns       ; I4   ; A0  ;
+; N/A   ; None              ; 19.500 ns       ; I5   ; A0  ;
+; N/A   ; None              ; 19.400 ns       ; I8   ; A1  ;
+; N/A   ; None              ; 19.400 ns       ; I2   ; A1  ;
+; N/A   ; None              ; 19.100 ns       ; I3   ; A1  ;
+; N/A   ; None              ; 19.100 ns       ; I6   ; A0  ;
+; N/A   ; None              ; 19.000 ns       ; I5   ; A1  ;
+; N/A   ; None              ; 18.900 ns       ; I9   ; A1  ;
+; N/A   ; None              ; 16.700 ns       ; I6   ; A1  ;
+; N/A   ; None              ; 16.700 ns       ; I7   ; A0  ;
+; N/A   ; None              ; 16.500 ns       ; I8   ; A3  ;
+; N/A   ; None              ; 16.500 ns       ; I8   ; A2  ;
+; N/A   ; None              ; 16.500 ns       ; I8   ; A0  ;
+; N/A   ; None              ; 16.200 ns       ; I1   ; Yex ;
+; N/A   ; None              ; 16.200 ns       ; I7   ; A1  ;
+; N/A   ; None              ; 16.000 ns       ; I9   ; A3  ;
+; N/A   ; None              ; 16.000 ns       ; I9   ; A2  ;
+; N/A   ; None              ; 16.000 ns       ; I9   ; A0  ;
+; N/A   ; None              ; 15.600 ns       ; I0   ; Yex ;
++-------+-------------------+-----------------+------+-----+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 4.2 Build 157 12/07/2004 SJ Full Version
+    Info: Processing started: Tue Nov 27 14:58:04 2007
+Info: Command: quartus_tan --import_settings_files=off --export_settings_files=off bcd -c bcd
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Longest tpd from source pin "I2" to destination pin "A0" is 23.800 ns
+    Info: 1: + IC(0.000 ns) + CELL(3.500 ns) = 3.500 ns; Loc. = PIN_49; Fanout = 3; PIN Node = 'I2'
+    Info: 2: + IC(3.900 ns) + CELL(2.300 ns) = 9.700 ns; Loc. = LC1_A16; Fanout = 1; COMB Node = 'inst30~90'
+    Info: 3: + IC(2.200 ns) + CELL(2.300 ns) = 14.200 ns; Loc. = LC7_A21; Fanout = 1; COMB Node = 'inst30~87'
+    Info: 4: + IC(0.600 ns) + CELL(2.300 ns) = 17.100 ns; Loc. = LC4_A21; Fanout = 1; COMB Node = 'inst30~103'
+    Info: 5: + IC(1.600 ns) + CELL(5.100 ns) = 23.800 ns; Loc. = PIN_10; Fanout = 0; PIN Node = 'A0'
+    Info: Total cell delay = 15.500 ns ( 65.13 % )
+    Info: Total interconnect delay = 8.300 ns ( 34.87 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Processing ended: Tue Nov 27 14:58:05 2007
+    Info: Elapsed time: 00:00:01
+
+
